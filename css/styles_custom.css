@@ -1,3 +1,9 @@
 .small-marg-right {
     margin-right: 20px;
 }
+
+.link-nobg:hover{
+    background-color:transparent !important;
+    cursor:default;
+}
+
