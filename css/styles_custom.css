@@ -1,9 +1,69 @@
 .small-marg-right {
     margin-right: 20px;
 }
+header {
+    height:400px;
+    min-height:400px;
+    background-size:cover;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url("../assets/Images/header.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+.hidden-spacer {
+    height: 56px
+}
 .link-nobg:hover{
     background-color:transparent !important;
     cursor:default;
 }
 
+.opacity-0 {
+    opacity:0!important;
+    
+  }
+  .opacity-1 {
+    background: rgba(62, 65, 62, 0.2)
+  }
+  .opacity-2 {
+    background: rgba(62, 65, 62, 0.4)
+  }
+  .opacity-3 {
+    background: rgba(62, 65, 62, 0.6)
+    
+  }
+  .opacity-4 {
+    background: rgba(62, 65, 62, 0.8)
+  }
+  .opacity-5 {
+    background: rgba(62, 65, 62, 1)
+  }
+  .opacity-1-n {
+    opacity: .2;
+  }
+  .opacity-2-n {
+    opacity: .4;
+  }
+  .opacity-3-n {
+    opacity: .6;
+    
+  }
+  .opacity-4-n {
+    opacity: .8;
+  }
+  .opacity-5-n {
+    opacity: 1;
+  }
+  /* Maybe even support hover opacity shifts */
+  .opacity-0h5 {
+    opacity:0!important;
+    transition: opacity .25s ease-in-out!important;
+    -moz-transition: opacity .25s ease-in-out!important;
+    -webkit-transition: opacity .25s ease-in-out!important;
+  }
+  .opacity-0h5:hover {
+    opacity:1!important;
+  }
