@@ -48,3 +48,17 @@ class Header extends HTMLElement {
   
   customElezments.define('header-component', Header);
 });
+
+var buttonUp = () => {
+  const input = document.querySelector(".searchbox-input");
+  const cards = document.getElementsByClassName("card");
+  let filter = input.value
+  for (let i = 0; i < cards.length; i++) {
+      let title = cards[i].querySelector(".card-body");
+      if (title.innerText.toLowerCase().indexOf(filter.toLowerCase()) > -1) {
+          cards[i].classList.remove("d-none")
+      } else {
+          cards[i].classList.add("d-none")
+      }
+  }
+}

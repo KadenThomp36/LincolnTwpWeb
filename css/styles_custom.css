@@ -20,43 +20,45 @@ header {
     background-color:transparent !important;
     cursor:default;
 }
+.opacity-1 {
+  background: rgba(62, 65, 62, 0.2)
+}
+.opacity-2 {
+  background: rgba(62, 65, 62, 0.4)
+}
+.opacity-3 {
+  background: rgba(62, 65, 62, 0.6)
+  
+}
+.opacity-4 {
+  background: rgba(62, 65, 62, 0.8)
+}
+.opacity-5 {
+  background: rgba(62, 65, 62, 1)
 
-.opacity-0 {
-    opacity:0!important;
-    
-  }
-  .opacity-1 {
-    background: rgba(62, 65, 62, 0.2)
-  }
-  .opacity-2 {
-    background: rgba(62, 65, 62, 0.4)
-  }
-  .opacity-3 {
-    background: rgba(62, 65, 62, 0.6)
-    
-  }
-  .opacity-4 {
-    background: rgba(62, 65, 62, 0.8)
-  }
-  .opacity-5 {
-    background: rgba(62, 65, 62, 1)
-  }
-  .opacity-1-n {
-    opacity: .2;
-  }
-  .opacity-2-n {
-    opacity: .4;
-  }
-  .opacity-3-n {
-    opacity: .6;
-    
-  }
-  .opacity-4-n {
-    opacity: .8;
-  }
-  .opacity-5-n {
-    opacity: 1;
-  }
+}
+.opacity-1-n {
+  opacity: .2;
+}
+.opacity-2-n {
+  opacity: .4;
+}
+.opacity-3-n {
+  opacity: .6;
+  
+}
+.opacity-4-n {
+  opacity: .8;
+}
+.opacity-5-n {
+  opacity: 1;
+}
+.blur-header {
+  backdrop-filter: blur(4px);
+}
+.fax-padding {
+  margin-left: 12px;
+}
   /* Maybe even support hover opacity shifts */
   .opacity-0h5 {
     opacity:0!important;
