@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Lincoln Township</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/Images/download.png" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link href="css/styles_custom.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Responsive navbar-->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark border-bottom opacity-2 blur-header">
+
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          Lincoln Township
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+            class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Officials</a>
+              <ul class="dropdown-menu collapse dropdown-menu-end mt-2" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="Supervisor.html">Supervisor</a></li>
+                <li><a class="dropdown-item" href="Clerk.html">Clerk</a></li>
+                <li><a class="dropdown-item" href="Treasurer.html">Treasurer</a></li>
+                <li><a class="dropdown-item" href="Trustees.html">Trustees</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="EOfficials.html"> Elected Officials</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="Officials.html">Township Officials</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Monthly Meetings</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Forms, Permits & Policies</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="h-auto mt-5 pb-5 d-flex align-items-center container">
+      <div class="row">
+        <div class="col">
+          <h1 class="text-light">Officials</h1>
+          <h3 class="text-white-50">Lincoln Township, Midland Michigan</h3>
+
+        </div>
+      </div>
+    </div>
+    
+  </header>
+
+  <div class="h-auto mt-5 mb-4 container ">
+    <div class="row mb-1">
+      <div class="col-auto" >
+        <span class="align-middle">
+          <div class="input-group">
+            <input type="search" class="form-control form-control-dark h-100 search-large" onkeyup="buttonUp();"
+            placeholder="Search..." aria-label="Search" id="official-search">
+            <button class="btn btn-danger" type="button" onclick="clearSearch()" id="button-addon2">Clear Search</button>
+          </div>
+      </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div id="carouselExampleSlidesOnly" class="carousel slide w-25" style="min-width: 200px;" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <h4 class="text-muted d-block">Search Anything...</h3>
+            </div>
+            <div class="carousel-item ">
+              <h4 class="text-muted d-block">Search Name...</h3>
+            </div>
+            <div class="carousel-item">
+              <h4 class="text-muted d-block">Search role...</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+  <!-- Page content-->
+  <div class="container-fluid bg-light pb-5 justify-content-center" >
+    <div class="row row-cols-auto justify-content-center mx-auto" style="max-width: 1315px;">
+      <div class="col oops d-none">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Oops!</h5>
+            <h6 class="card-subtitle mb-0 text-muted text-center">No results...</h6><br>
+            <h6 class="mb-4 text-center">Looking for elected officials?</h6>
+            <div class="text-center d-grid">
+              <a href="EOfficials.html" class="btn btn-primary text-center">Try Here</a>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Board of Review Chairperson</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Kim Oswald</h6><br>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Board of Review Member<br></h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Vanda Yaroch</h6><br>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Board of Review Member<br></h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Henry Pnacek</h6><br>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone<small class="text-muted"> Ext: (2,1)</small></h6><a
+                  href="tel:989-274-2220" class="page-link border-0">(989) 374-2220</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Deputy Clerk</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Sherry Chinevere</h6><br>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Constable</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Kevin Renwick</h6><br>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone<small class="text-muted"></small></h6><a
+                  href="tel:989-687-7198" class="page-link border-0">(989) 687-7198</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Fire Chief</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Robert Marks</h6><br>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone<small class="text-muted"> Ext: (7)</small></h6><a
+                  href="tel:989-687-7198" class="page-link border-0">(989) 374-2220</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Deputy Treasurer</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Debbie DeBoe</h6><br>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Electrical Inspector</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Thomas Chritz</h6><br>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone<small class="text-muted"> Ext: (2,3)</small></h6><a
+                  href="tel:989-374-2220" class="page-link border-0">(989) 374-2220</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Plumbing/Mechanical Inspector</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Thomas Chritz</h6>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone<small class="text-muted"> Ext: (2,3)</small></h6><a
+                  href="tel:989-374-2220" class="page-link border-0">(989) 374-2220</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Lincoln Township Hall and Park Rental</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Karen Marks</h6>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone<small class="text-muted"> Ext: (6)</small></h6><a
+                  href="tel:989-374-2220" class="page-link border-0">(989) 374-2220</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Ordinance Enforcement Officer</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Steve Marker</h6>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone<small class="text-muted"> Ext: (4)</small></h6><a
+                  href="tel:989-374-2220" class="page-link border-0">(989) 374-2220</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Planning Commission Member</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">N/a</h6>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone<small class="text-muted"></small></h6><a
+                  class="page-link border-0 link-nobg">N/a</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Planning Commission Chairperson / Contact</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Jamie Crockett</h6>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a class="page-link border-0" href="mailto:pc@lincoln-twp.org">pc@lincoln-twp.org</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone<small class="text-muted"> Ext: (5)</small></h6><a
+                  href="tel:989-374-2220" class="page-link border-0">(989) 374-2220</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Planning Commission Member / Secretary</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Reid Duford</h6>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone<small class="text-muted"></small></h6><a
+                  class="page-link border-0 link-nobg">N/a</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Planning Commission Member</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Dave Dauer</h6>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone<small class="text-muted"></small></h6><a
+                  class="page-link border-0 link-nobg">N/a</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Planning Commission Member</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Andy Acker</h6>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone<small class="text-muted"></small></h6><a
+                  class="page-link border-0 link-nobg">N/a</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Tax Assessor</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Ron Thompson</h6>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a href="mailto:assessor@lincoln-twp.org" class="page-link border-0">assessor@lincoln-twp.org</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone<small class="text-muted"> Ext: (3)</small></h6>
+                <a href="tel:989-374-2220" class="page-link border-0">(989) 374-2220</a>
+                <span class="fax-padding">fax: (989) 687-9167</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Zoning Board of Appeals Chairman</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Reid Duford</h6>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a href="mailto:rduford63@gmail.com" class="page-link border-0 link-nobg">rduford63@gmail.com</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone<small class="text-muted"></small></h6><a
+                  href="tel:989-687-2816" class="page-link border-0 link-nobg">(989) 687-2816</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Zoning Board of Appeals Member</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Dana Maier</h6>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone<small class="text-muted"></small></h6><a
+                  class="page-link border-0 link-nobg">N/a</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col targ">
+        <div class="card mx-auto mt-4 border-secondary" style="width: 19rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Zoning Board of Appeals Member</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">Monty McCann</h6>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Email</h6><a class="page-link border-0 link-nobg">N/a</a>
+              </li>
+              <li class="list-group-item">
+                <h6 class="card-subtitle mb-1">Office Phone<small class="text-muted"></small></h6><a
+                  class="page-link border-0 link-nobg">N/a</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
