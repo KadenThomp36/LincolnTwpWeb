@@ -59,6 +59,10 @@ header {
 .fax-padding {
   margin-left: 12px;
 }
+.search-large {
+  font-size: 20px;
+  font-weight: 600;
+}
   /* Maybe even support hover opacity shifts */
   .opacity-0h5 {
     opacity:0!important;
