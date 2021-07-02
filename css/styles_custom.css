@@ -1,3 +1,92 @@
 .small-marg-right {
     margin-right: 20px;
 }
+header {
+    min-height:400px;
+    background-size:cover;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url("../assets/Images/header.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hidden-spacer {
+    height: 56px
+}
+.link-nobg:hover{
+    background-color:transparent !important;
+    cursor:default;
+}
+.opacity-1 {
+  background: rgba(62, 65, 62, 0.2)
+}
+.opacity-2 {
+  background: rgba(62, 65, 62, 0.4)
+}
+.opacity-3 {
+  background: rgba(62, 65, 62, 0.6)
+  
+}
+.opacity-4 {
+  background: rgba(62, 65, 62, 0.8)
+}
+.opacity-5 {
+  background: rgba(62, 65, 62, 1)
+
+}
+.opacity-1-n {
+  opacity: .2;
+}
+.opacity-2-n {
+  opacity: .4;
+}
+.opacity-3-n {
+  opacity: .6;
+  
+}
+.opacity-4-n {
+  opacity: .8;
+}
+.opacity-5-n {
+  opacity: 1;
+}
+.blur-header {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.fax-padding {
+  margin-left: 12px;
+}
+.search-large {
+  font-size: 20px;
+  font-weight: 600;
+}
+  /* Maybe even support hover opacity shifts */
+  .opacity-0h5 {
+    opacity:0!important;
+    transition: opacity .25s ease-in-out!important;
+    -moz-transition: opacity .25s ease-in-out!important;
+    -webkit-transition: opacity .25s ease-in-out!important;
+  }
+  .opacity-0h5:hover {
+    opacity:1!important;
+  }
+
+  /* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; } 
+
+.search-large:focus {
+    outline: none !important;
+    border:1px solid red;
+    box-shadow: 0 0 10px #719ECE;
+    color: rgb(0, 0, 0);
+}
