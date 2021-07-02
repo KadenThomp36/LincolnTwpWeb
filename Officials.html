@@ -72,8 +72,11 @@
     <div class="row mb-4">
       <div class="col-8">
         <span class="align-middle">
-        <input type="search" class="form-control form-control-dark searchbox-input h-100 search-large" onkeyup="buttonUp();"
-        placeholder="Search..." aria-label="Search">
+          <div class="input-group">
+            <input type="search" class="form-control form-control-dark h-100 search-large" onkeyup="buttonUp();"
+            placeholder="Search..." aria-label="Search" id="official-search">
+            <button class="btn btn-danger" type="button" onclick="clearSearch()" id="button-addon2">Clear Search</button>
+          </div>
       </span>
       </div>
     </div>

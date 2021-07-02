@@ -8,7 +8,7 @@
 
 
 var buttonUp = () => {
-  const input = document.querySelector(".searchbox-input");
+  const input = document.getElementById("official-search");
   const cards = document.getElementsByClassName("targ");
   const oopsie = document.getElementsByClassName("oops");
   let filter = input.value
@@ -31,6 +31,19 @@ var buttonUp = () => {
     oopsie[0].classList.remove("d-none")
   }
 }
+
+function clearSearch(){
+  const oopsie = document.getElementsByClassName("oops");
+  const search = document.getElementById("official-search");
+  const cards = document.getElementsByClassName("targ");
+  search.value = ''
+  oopsie[0].classList.add("d-none")
+  for (let i = 0; i < cards.length; i++) {
+        cards[i].classList.remove("d-none")
+    }
+
+}
+
 
 class Header extends HTMLElement {
   connectedCallback() {
