@@ -5,7 +5,8 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
-
+var meeting_changed = false;
+var year_changed = false;
 
 var buttonUp = () => {
   const input = document.getElementById("official-search");
@@ -41,6 +42,35 @@ function clearSearch(){
   for (let i = 0; i < cards.length; i++) {
         cards[i].classList.remove("d-none")
     }
+
+}
+
+function enableYear() {
+  document.getElementById("year-list").disabled=false;
+  meeting_changed = true;
+}
+
+function YearChanged() {
+  year_changed = true;
+}
+
+function dispalyFilterError() {
+  const meetings_err = document.getElementById("err-meeting");
+  const year_err = document.getElementById("err-year");
+  console.log(meeting_changed)
+  console.log(year_changed)
+  if (meeting_changed == false){
+    meetings_err.classList.remove("d-none");
+  }
+  else{
+    meetings_err.classList.add("d-none");
+    if (year_changed == false){
+      year_err.classList.remove("d-none");
+    }
+    else {
+      year_err.classList.add("d-none");
+    }
+  }
 
 }
 
