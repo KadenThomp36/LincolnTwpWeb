@@ -6,7 +6,7 @@
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
 var meeting_changed = false;
-var year_changed = false;
+var year_changed = false; 
 
 var buttonUp = () => {
   const input = document.getElementById("official-search");
@@ -54,9 +54,11 @@ function YearChanged() {
   year_changed = true;
 }
 
+
 function dispalyFilterError() {
   const meetings_err = document.getElementById("err-meeting");
   const year_err = document.getElementById("err-year");
+  const month_err = document.getElementById("err-month");
   console.log(meeting_changed)
   console.log(year_changed)
   if (meeting_changed == false){
@@ -69,6 +71,7 @@ function dispalyFilterError() {
     }
     else {
       year_err.classList.add("d-none");
+
     }
   }
 

@@ -8,7 +8,7 @@ header {
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
       ), url("../assets/Images/header.jpeg");
-    background-position: center;
+    background-position:right;
     background-repeat: no-repeat;
 }
 
