@@ -13,10 +13,17 @@ header {
 }
 
 .box-shadow {
-  -webkit-box-shadow: 0 0 15px 2px #020202;
-  -moz-box-shadow: 0 0 15px 2px #020202;
-  box-shadow: 0 0 15px 2px #020202;
+  -webkit-box-shadow: 0 0 15px 2px rgb(0,0,0,0.2);
+  -moz-box-shadow: 0 0 15px 2px rgb(0,0,0,0.2);
+  box-shadow: 0 0 15px 2px rgb(0,0,0,0.2);
 }
+@media only screen and (max-width: 600px) {
+    .box-shadow {
+        -webkit-box-shadow: 0 0 15px 2px rgb(0,0,0,0);
+        -moz-box-shadow: 0 0 15px 2px rgb(0,0,0,0);
+        box-shadow: 0 0 15px 2px rgb(0,0,0,0);
+    }
+} 
 
 .hidden-spacer {
     height: 56px

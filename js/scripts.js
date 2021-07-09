@@ -6,7 +6,15 @@
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
 var meeting_changed = false;
-var year_changed = false; 
+var year_changed = false;
+var year_val;
+var meeting_val;
+var table_to_disp;
+
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
 
 var buttonUp = () => {
   const input = document.getElementById("official-search");
@@ -45,13 +53,25 @@ function clearSearch(){
 
 }
 
-function enableYear() {
+function meetingChanged() {
   document.getElementById("year-list").disabled=false;
   meeting_changed = true;
+  var meet_temp = document.getElementsByClassName("meeting");
+  for (var i = 0; i < meet_temp.length; i++){
+    if(meet_temp[i].selected == true){
+      meeting_val=meet_temp[i].value;
+  }
+}
 }
 
 function YearChanged() {
   year_changed = true;
+  var year_temp = document.getElementsByClassName("year");
+  for (var i = 0; i < year_temp.length; i++){
+    if(year_temp[i].selected == true){
+      year_val=year_temp[i].value;
+    }
+  }
 }
 
 
@@ -75,6 +95,19 @@ function dispalyFilterError() {
     }
   }
 
+}
+
+function displayMeetingYear() {
+  table_to_disp = year_val + meeting_val;
+  const tables = document.getElementsByClassName("table-holder");
+  for (let i = 0; i < tables.length; i++) {
+    tables[i].classList.add("d-none");
+    console.log(tables[i].id)
+    if (tables[i].id == table_to_disp){
+      console.log(tables[i].id + "removed")
+      tables[i].classList.remove("d-none");
+    }
+}
 }
 
 
