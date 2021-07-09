@@ -5,7 +5,16 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
+var meeting_changed = false;
+var year_changed = false;
+var year_val;
+var meeting_val;
+var table_to_disp;
 
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
 
 var buttonUp = () => {
   const input = document.getElementById("official-search");
@@ -42,6 +51,63 @@ function clearSearch(){
         cards[i].classList.remove("d-none")
     }
 
+}
+
+function meetingChanged() {
+  document.getElementById("year-list").disabled=false;
+  meeting_changed = true;
+  var meet_temp = document.getElementsByClassName("meeting");
+  for (var i = 0; i < meet_temp.length; i++){
+    if(meet_temp[i].selected == true){
+      meeting_val=meet_temp[i].value;
+  }
+}
+}
+
+function YearChanged() {
+  year_changed = true;
+  var year_temp = document.getElementsByClassName("year");
+  for (var i = 0; i < year_temp.length; i++){
+    if(year_temp[i].selected == true){
+      year_val=year_temp[i].value;
+    }
+  }
+}
+
+
+function dispalyFilterError() {
+  const meetings_err = document.getElementById("err-meeting");
+  const year_err = document.getElementById("err-year");
+  const month_err = document.getElementById("err-month");
+  console.log(meeting_changed)
+  console.log(year_changed)
+  if (meeting_changed == false){
+    meetings_err.classList.remove("d-none");
+  }
+  else{
+    meetings_err.classList.add("d-none");
+    if (year_changed == false){
+      year_err.classList.remove("d-none");
+    }
+    else {
+      year_err.classList.add("d-none");
+
+    }
+  }
+
+}
+
+function displayMeetingYear() {
+  table_to_disp = year_val + meeting_val;
+  const tables = document.getElementsByClassName("table-holder");
+  for (let i = 0; i < tables.length; i++) {
+    tables[i].classList.add("d-none");
+    console.log(tables[i].id)
+    if (tables[i].id == table_to_disp){
+      console.log(tables[i].id + "removed")
+      tables[i].classList.remove("d-none");
+    }
+}
 }
 
 
