@@ -12,6 +12,12 @@ header {
     background-repeat: no-repeat;
 }
 
+.box-shadow {
+  -webkit-box-shadow: 0 0 15px 2px #020202;
+  -moz-box-shadow: 0 0 15px 2px #020202;
+  box-shadow: 0 0 15px 2px #020202;
+}
+
 .hidden-spacer {
     height: 56px
 }
