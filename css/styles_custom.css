@@ -110,6 +110,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
       transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
   padding: 14px 80px 18px 36px;
   cursor: pointer;
+  width: 320px; 
+  height: 200px;
 }
 
 .card2:hover{
@@ -178,9 +180,22 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
    background-position: right;
    background-size: 80px;
 }
+.card2-9{
+  background-image: url("../assets/Images/TownshipRecreation.png");
+     background-repeat: no-repeat;
+   background-position: right;
+   background-size: 80px;
+}
+.card2-10{
+  background-image: url("../assets/Images/voting.png");
+     background-repeat: no-repeat;
+   background-position: right;
+   background-size: 80px;
+}
 
-@media(max-width: 990px){
+@media(max-width: 320px){
   .card2{
-    margin: 20px;
+    width: 280px; 
+    height: 200px;
   }
 } 
