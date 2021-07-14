@@ -7,6 +7,7 @@
 // Use this file to add JavaScript to your project
 var meeting_changed = false;
 var year_changed = false;
+var firstmodal = true;
 var year_val;
 var meeting_val;
 var table_to_disp;
@@ -40,6 +41,59 @@ var buttonUp = () => {
     oopsie[0].classList.remove("d-none")
   }
 }
+
+var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
+var source;
+function setSrc(src){
+  source = src;
+  if(firstmodal != true){
+    document.getElementById('embedpdf').remove();
+  }
+  firstmodal =false;
+  console.log(document.getElementById('afterme'));
+  document.getElementById('afterme').insertAdjacentHTML('afterend','<embed src="" type="application/pdf" id="embedpdf" />')
+  document.getElementById('embedpdf').src = src;
+}
+
+/* Helper function */
+function download_file() {
+  fileURL = source;
+  fileName = source;
+  // for non-IE
+  if (!window.ActiveXObject) {
+      var save = document.createElement('a');
+      save.href = fileURL;
+      save.target = '_blank';
+      var filename = fileURL.substring(fileURL.lastIndexOf('/')+1);
+      save.download = fileName || filename;
+       if ( navigator.userAgent.toLowerCase().match(/(ipad|iphone|safari)/) && navigator.userAgent.search("Chrome") < 0) {
+      document.location = save.href; 
+// window event not working here
+    }else{
+          var evt = new MouseEvent('click', {
+              'view': window,
+              'bubbles': true,
+              'cancelable': false
+          });
+          save.dispatchEvent(evt);
+          (window.URL || window.webkitURL).revokeObjectURL(save.href);
+    }	
+  }
+
+  // for IE < 11
+  else if ( !! window.ActiveXObject && document.execCommand)     {
+      var _window = window.open(fileURL, '_blank');
+      _window.document.close();
+      _window.document.execCommand('SaveAs', true, fileName || fileURL)
+      _window.close();
+  }
+}
+
 
 function clearSearch(){
   const oopsie = document.getElementsByClassName("oops");
@@ -129,4 +183,33 @@ class Header extends HTMLElement {
   }
 }
 customElements.define('main-header', Header);
+
+class Div extends HTMLDivElement {
+  connectedCallback() {
+    this.innerHTML = `
+    <div class="modal-body">
+      <div>
+        <object
+        id="data"
+        type="application/pdf"
+        width="1000"
+        height="678"
+        data="`+ source +`">
+          <iframe
+          id="src"
+          width="1000"
+          height="678"
+          src="`+ source +`">
+            <p>This browser does not support PDF!</p>
+          </iframe>
+
+        </object>
+      </div>
+    </div>
+    `;
+  }
+}
+customElements.define('modal-body', Div);
+
+
 

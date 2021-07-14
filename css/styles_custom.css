@@ -24,7 +24,16 @@ header {
         box-shadow: 0 0 15px 2px rgb(0,0,0,0);
     }
 } 
-
+embed{
+  height: 1100px;
+  width: auto;
+}
+@media(max-width: 768px){
+  embed{
+    width: auto; 
+    height: 568px;
+  }
+} 
 .hidden-spacer {
     height: 56px
 }

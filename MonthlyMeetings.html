@@ -153,9 +153,9 @@
       <h1>2021 Board Meetings</h1>
       <p style="max-width: 500px;" class="lead">Meetings are held on the <strong>2nd Tuesday</strong> of each month at the <a href="https://www.google.com/" data-bs-toggle="tooltip" data-bs-placement="top" title="Click for Directions" style="color: black;"><strong>Lincoln Township Hall.</strong></a> Meetings begin at <em>7:00pm Unless otherwise specified</em></p>
       <div class="box-shadow">
-    <table class="table table-striped align-middle">
+    <table class="table table-striped align-middle mx-auto">
       <thead>
-        <tr>
+        <tr style="position: sticky; top: 0; background-color: white;">
           <th scope="col" style="position: sticky; top: 0; background-color: white;">Date</th>
           <th scope="col" style="position: sticky; top: 0; background-color: white;">Agenda</th>
           <th scope="col" style="position: sticky; top: 0; background-color: white;">Meeting Minutes</th>
@@ -163,77 +163,93 @@
       </thead>
       <tbody>
         <tr>
-          <th scope="row">January 12th</th>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
+          <th scope="row">January 12th</th> <!--onclick="window.open('brdmtgs/2021b/aprmtg/apragnd.pdf');"-->
+          <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrc('brdmtgs/2021b/janmtg/janagnd.pdf')">View</button></td>
+          <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrc('brdmtgs/2021b/janmtg/janmin.pdf')">View</button></td>
         </tr>
         <tr>
           <th scope="row">February 9th</th>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
+          <td><button type="button" class="btn btn-primary" >View</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
         </tr>
         <tr>
           <th scope="row">March 9th</th>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
         </tr>
         <tr>
           <th scope="row">March ??<br><small class="text-muted"> Budget Meeting Workshop <u>6:00pm</u></small></th>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
         </tr>
         <tr>
           <th scope="row">March 23rd<br><small class="text-muted">Special Meeting <u>6:00pm</u></small></th>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
         </tr>
         <tr>
           <th scope="row">April 13th</th>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
         </tr>
         <tr>
           <th scope="row">May 11th</th>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
         </tr>
         <tr>
           <th scope="row">June 8th</th>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
         </tr>
         <tr>
           <th scope="row">July 13th</th>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
         </tr>
         <tr>
           <th scope="row">August 10th</th>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
         </tr>
         <tr>
           <th scope="row">Spetember 14th</th>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
         </tr>
         <tr>
           <th scope="row">October 12th</th>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
         </tr>
         <tr>
           <th scope="row">November 9th</th>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
         </tr>
         <tr>
           <th scope="row">December 14th</th>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
-          <td><button type="button" class="btn btn-primary">Details</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
+          <td><button type="button" class="btn btn-primary">View</button></td>
         </tr>
       </tbody>
     </table>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header" id="afterme">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="download_file()">Download</button>
+      </div>
     </div>
   </div>
 </div>
