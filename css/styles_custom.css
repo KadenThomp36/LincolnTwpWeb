@@ -127,6 +127,27 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   pointer-events: none;
   background-color: #609FFC;
   border-color: #609FFC;
+  -webkit-appearance: none;
+}
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+{ 
+  .sticky-table-head {
+    top: 0; 
+    background-color: white!important;
+  }
+}
+.sticky-table-head {
+  position: sticky; 
+  top: 0; 
+  background-color: white!important;
+}
+
+.btn {
+  -webkit-appearance: none;
+}
+.modal-body {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
 }
 
 .card2:hover{
