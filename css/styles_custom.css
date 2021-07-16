@@ -125,8 +125,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .customDisabled {
   pointer-events: none;
-  background-color: #609FFC;
-  border-color: #609FFC;
+  background-color: #E17581;
+  border-color: #E17581;
   -webkit-appearance: none;
 }
 @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
@@ -145,8 +145,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .btn {
   -webkit-appearance: none;
 }
-.modal-body {
-  max-height: calc(100vh - 200px);
+embed {
+  height: calc(100vh - 200px);
   overflow-y: auto;
 }
 
