@@ -4,7 +4,7 @@ class Footer extends HTMLElement {
       this.innerHTML = `
       <footer class="footer-bs justify-content-center">
     <div class="row mx-auto" style="max-width: 1315px;">
-      <div class="col-md-3 footer-nav animated fadeInLeft border-0">
+      <div class="col-md-3 footer-nav animated border-0">
         <h4>Lincoln Township Hall</h4>
         <ul class="list">
           <li>Get Directions</li>
