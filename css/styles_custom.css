@@ -25,6 +25,11 @@ header {
     }
 }
 
+.list-group-item.active {
+  background-color: #BB2D3B!important;
+  border-color: #BB2D3B!important;
+}
+
 embed{
   height: 1100px;
   width: auto;
