@@ -18,11 +18,20 @@ header {
   box-shadow: 0 0 15px 2px rgb(0,0,0,0.2);
 }
 @media only screen and (max-width: 600px) {
-    .box-shadow {
-        -webkit-box-shadow: 0 0 15px 2px rgb(0,0,0,0);
-        -moz-box-shadow: 0 0 15px 2px rgb(0,0,0,0);
-        box-shadow: 0 0 15px 2px rgb(0,0,0,0);
-    }
+  .box-shadow {
+      -webkit-box-shadow: 0 0 15px 2px rgb(0,0,0,0);
+      -moz-box-shadow: 0 0 15px 2px rgb(0,0,0,0);
+      box-shadow: 0 0 15px 2px rgb(0,0,0,0);
+  }
+}
+
+.officials-card {
+  width: 19rem;
+}
+@media only screen and (max-width: 600px) {
+  .officials-card {
+    width: 17rem;
+  }
 }
 
 .homepage-small {
