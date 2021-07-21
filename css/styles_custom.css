@@ -1,7 +1,7 @@
 .small-marg-right {
     margin-right: 20px;
 }
-header {
+.lincoln-header {
     min-height:400px;
     background-size:cover;
     background-image: linear-gradient(
@@ -10,6 +10,19 @@ header {
       ), url("../assets/Images/header.jpeg");
     background-position:right;
     background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1000px) {
+  .lincoln-header-small {
+    min-height:400px;
+    background-size:cover;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url("../assets/Images/mobileHeader.png");
+    background-position:right;
+    background-repeat: no-repeat;
+}
 }
 
 .box-shadow {
@@ -23,6 +36,14 @@ header {
       -moz-box-shadow: 0 0 15px 2px rgb(0,0,0,0);
       box-shadow: 0 0 15px 2px rgb(0,0,0,0);
   }
+}
+
+.page-link {
+  color: #BB2D3B!important;
+}
+
+.page-link:hover {
+  color: #BB2D3B!important;
 }
 
 .officials-card {
@@ -46,10 +67,6 @@ header {
   ), url("../assets/Images/hallpic2.jpeg");
   background-position: center;
   background-size: cover;
-}
-
-@media only screen and (max-width: 1072) {
-
 }
 
 .scrollOne {
