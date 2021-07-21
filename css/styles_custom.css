@@ -282,7 +282,15 @@ embed {
     width: 280px; 
     height: 200px;
   }
-} 
+}
+
+.alert {
+  padding: 0.25rem 0.25rem;
+}
+
+.alert-dismissible .btn-close {
+  padding: 0.60rem 1rem!important;
+}
 
 .footer-bs {
   background-color: #3c3d41;
