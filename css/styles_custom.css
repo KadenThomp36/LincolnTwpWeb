@@ -25,6 +25,48 @@ header {
     }
 }
 
+.homepage-small {
+  max-width: 500px;
+  height: 300px;
+}
+
+.park-back {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  ), url("../assets/Images/hallpic2.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 1072) {
+
+}
+
+.scrollOne {
+  height: 88%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.scrollTwo {
+  height: 75%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.scrollThree {
+  height: 60%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.scrollFour {
+  height: 45%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .list-group-item.active {
   background-color: #BB2D3B!important;
   border-color: #BB2D3B!important;
@@ -292,3 +334,4 @@ margin-bottom:10px;
 @media (min-width: 768px) {
 .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
 }
+

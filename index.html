@@ -10,7 +10,6 @@
   <!-- Favicon-->
   <link rel="icon" type="image/x-icon" href="assets/Images/download.png" />
   <!-- Core theme CSS (includes Bootstrap)-->
-  <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="css/styles_custom.css" rel="stylesheet">
@@ -70,16 +69,16 @@
 
   <!-- Page content-->
   <div class="container-fluid bg-light">
-    <div class="row row-cols-auto justify-content-center mx-auto w-auto py-5" style="max-width: 1600px;">
+    <div class="row row-cols-auto mx-auto w-auto py-3" style="max-width: 1600px;">
 
-      <div class="col m-auto shadow rounded-3 p-2">
+      <div class="col m-auto shadow rounded-3 p-2 mb-3">
         <h3 class="border-bottom pb-2">Gallery</h3>
         <div id="carouselExampleCaptions" class="carousel slide h-auto" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
           </div>
-          <div class="carousel-inner rounded" style="max-width: 500px;">
+          <div class="carousel-inner rounded" style="max-width: 500px; height: 300px;">
             <div class="carousel-item active">
               <img src="assets/Images/hallpic1.jpeg" class="d-block w-100">
               <div class="carousel-caption d-none d-md-block">
@@ -106,9 +105,9 @@
         </div>
       </div>
       
-      <div class="col m-auto shadow rounded-3 p-2" >
-        <h3>News and Updates</h3>
-        <div class="row-cols-auto" style="max-width: 500px;">
+      <div class="col m-auto shadow rounded-3 p-2 mb-3" >
+        <h3 class="border-bottom pb-2">News and Updates</h3>
+        <div class="row-cols-auto" style="max-width: 500px; height: 300px;" >
           <div class="col rounded-3">
             <div class="list-group rounded-3" id="list-tab" role="tablist" >
               <a class="list-group-item list-group-item-action active rounded-3" id="news-item-one" data-toggle="list" href="#news-one"
@@ -119,7 +118,7 @@
                 role="tab" aria-controls="news-item-three"><strong>Deer spotting!</strong></a>
             </div>
           </div>
-          <div class="col pt-4 px-4">
+          <div class="col pt-4 px-4 scrollThree"><!--Make sure this always matches the number of news stories, if there are ever more than 4 let me know (not cuurently supported)-->
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="news-one" role="tabpanel" aria-labelledby="news-item-one">
                 <h4 class="text-muted">07/02/2021</h4>
@@ -129,9 +128,42 @@
                 <h4 class="text-muted">07/19/2021</h4>
                 <p><strong>The website is getting a redesign! thats great! make sure you always have atleast enough text to span this distance</strong></p>
               </div>
-              <div class="tab-pane fade" id="news-three" role="tabpanel" aria-labelledby="news-item-three">
+              <div class="tab-pane fade scroll" id="news-three" role="tabpanel" aria-labelledby="news-item-three" >
                 <h4 class="text-muted">12/02/1998</h4>
-                <p><strong>There was a deer spotted somewhere in Michigan yesterday! Stay on your toes!</strong></p>
+                <p><strong>There was a deer spotted somewhere in Michigan yesterday! Stay on your toes!There was a deer spotted somewhere in Michigan yesterday! Stay on your toes!There was a deer spotted somewhere in Michigan yesterday! Stay on your toes!There was a deer spotted somewhere in Michigan yesterday! Stay on your toes!There was a deer spotted somewhere in Michigan yesterday! Stay on your toes!There was a deer spotted somewhere in Michigan yesterday! Stay on your toes!There was a deer spotted somewhere in Michigan yesterday! Stay on your toes!</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col shadow rounded-3 p-2 m-auto park-back mt-5" style="width: 100%; max-width: 1315px;">
+        <div class="container" style="max-width: 1300px; min-height: 300px;">
+          <div class="row">
+            <div class="col-md-auto mx-auto mb-3 text-center" style="max-width: 250px;">
+              <h2 class="card-title text-white">Lincoln Township Park</h2>
+            </div>
+            <div class="col-md-auto mx-auto mb-3 text-center">
+              <h6 class="text-white">Hours Of Operation</h6>
+              <p class="card-text text-white">M: 12:00 - 12:00</p>
+              <p class="card-text text-white">T: 12:00 - 12:00</p>
+              <p class="card-text text-white">W: 12:00 - 12:00</p>
+              <p class="card-text text-white">Th: 12:00 - 12:00</p>
+              <p class="card-text text-white">F: 12:00 - 12:00</p>
+              <p class="card-text text-white">Sa: 12:00 - 12:00</p>
+              <p class="card-text text-white">Sun: 12:00 - 12:00</p>
+            </div>
+            <div class="col-md-auto mx-auto">
+              <div style="width: 100%;">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.0865542178217!2d-84.34161624808195!3d43.66716967901843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882180b92361b255%3A0x894af57a51255eb9!2sLincoln%20Township%20Park!5e0!3m2!1sen!2sus!4v1626829029886!5m2!1sen!2sus" 
+                height="300px"
+                width="100%"
+                class="rounded-3" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+              </iframe>
               </div>
             </div>
           </div>
