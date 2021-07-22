@@ -10,6 +10,19 @@ function currentPage(currentPageName) {
   } else {
     navitems.setAttribute("class", "active nav-link");
   }
+
+  if (currentPageName == 'home'){
+    document.getElementById('title').innerHTML = 'Homepage'
+  }
+  if (currentPageName == 'officials'){
+    document.getElementById('title').innerHTML = 'Officials'
+  }
+  if (currentPageName == 'meetings'){
+    document.getElementById('title').innerHTML = 'Monthly Meetings'
+  }
+  if (currentPageName == 'links'){
+    document.getElementById('title').innerHTML = 'Useful Links'
+  }
 }
 
 
@@ -69,10 +82,10 @@ class customHeader extends HTMLElement {
         </div>
       </div>
     </nav>
-    <div class="h-auto mt-5 d-flex align-items-center container">
+    <div class="h-auto mt-2 d-flex align-items-center container">
       <div class="row">
         <div class="col">
-          <h1 class="text-light">Homepage</h1>
+          <h1 class="text-light" id="title">&zwnj; </h1>
           <h3 class="text-white-50">Lincoln Township, Midland Michigan</h3>
         </div>
       </div>
