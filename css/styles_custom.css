@@ -25,6 +25,11 @@
 }
 }
 
+.content {
+  min-height: calc(50vh - 120px);
+  /* 80px header + 40px footer = 120px  */
+}
+
 .box-shadow {
   -webkit-box-shadow: 0 0 15px 2px rgb(0,0,0,0.2);
   -moz-box-shadow: 0 0 15px 2px rgb(0,0,0,0.2);
@@ -39,11 +44,11 @@
 }
 
 .page-link {
-  color: #BB2D3B!important;
+  color: #dc3545!important;
 }
 
 .page-link:hover {
-  color: #BB2D3B!important;
+  color: #dc3545!important;
 }
 
 .officials-card {
@@ -94,8 +99,8 @@
 }
 
 .list-group-item.active {
-  background-color: #BB2D3B!important;
-  border-color: #BB2D3B!important;
+  background-color: #dc3545!important;
+  border-color: #dc3545!important;
 }
 
 embed{
