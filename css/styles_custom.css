@@ -103,6 +103,11 @@
   border-color: #dc3545!important;
 }
 
+.custom-modal-size {
+  max-width: 800px;
+  margin: 1.75rem auto;
+}
+
 embed{
   height: 1100px;
   width: auto;
