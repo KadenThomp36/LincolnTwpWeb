@@ -5,6 +5,10 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
+
+// When the user scrolls the page, execute myFunction
+
+
 var meeting_changed = false;
 var year_changed = false;
 var firstmodal = true;
@@ -210,6 +214,8 @@ class Div extends HTMLDivElement {
   }
 }
 customElements.define('modal-body', Div);
+
+
 
 
 

@@ -29,7 +29,7 @@ function currentPage(currentPageName) {
 class customHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-    <header class="lincoln-header lincoln-header-small">
+    <header class="lincoln-header lincoln-header-small" id="header">
     <nav class="navbar navbar-expand-lg navbar-dark border-bottom opacity-2 blur-header">
       <div class="container">
         <a class="navbar-brand" href="index.html">
