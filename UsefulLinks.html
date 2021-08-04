@@ -20,72 +20,177 @@
 </head>
 
 <body onload="currentPage('links')">
-
-  <lincoln-header></lincoln-header>
-  <lincoln-alert></lincoln-alert>
-
-<body>
-
-  <div class="container-fluid bg-light justify-content-center">
+<lincoln-header></lincoln-header>
+  <div class="container-fluid bg-light justify-content-center main-container">
+    <lincoln-alert></lincoln-alert>
     <div class="row row-cols-auto justify-content-center mx-auto" style="max-width: 1315px;">
       <div class="col my-2">
         <div class="card2 card2-1" onclick="location.href='https://is.bsasoftware.com/bsa.is/AssessingServices/ServiceAssessingSearch.aspx?i=1&appid=0&unit=314/';">
           <h3>Property Tax Information</h3>
-          <p>This is where users can view Lincoln Towhship residents property tax information</p>
+          <p>users can view Lincoln Towhship residents property tax information</p>
         </div>
       </div>
       <div class="col my-2" >
-        <div class="card2 card2-2"> <!--needs its own page-->
-          <h3>Forms, Permits and Policies</h3>
-          <p>This is where users can find links to view forms for several township functions</p>
-        </div>
-      </div>
-      <div class="col my-2" >
-        <div class="card2 card2-3">
+        <div class="card2 card2-3" onclick="location.href='assets/Plans/WaterDistrict1.pdf';">
           <h3>Water District #1</h3>
-          <p>I really have no idea what this is for but here is some placeholder content until dad tells me</p>
+          <p>New water connection procedures</p>
         </div>
       </div>
       <div class="col my-2" >
-        <div class="card2 card2-4" onclick="location.href='https://www.republicservices.com';">
+        <div class="card2 card2-4" onclick="location.href='https://www.republicservices.com/';">
           <h3>Trash Collection and Recycling</h3>
-          <p>I really have no idea what this is for but here is some placeholder content until dad tells me</p>
+          <p>Direct link to Republic Services Website</p>
         </div>
       </div>
-      <div class="col my-2" >
-        <div class="card2 card2-5"  >
+      <div class="col my-2">
+        <div class="card2 card2-5" onclick="ScrollOnClick('zoning-pos')">
           <h3>Zoning Ordinances</h3>
-          <p>I really have no idea what this is for but here is some placeholder content until dad tells me</p>
+          <p>This is where users can find a complete listing of township ordinances</p>
         </div>
       </div>
       <div class="col my-2" >
         <div class="card2 card2-6"  >
           <h3>Zoning Maps</h3>
-          <p>I really have no idea what this is for but here is some placeholder content until dad tells me</p>
+          <p>This is where users can find current zoning maps and school district map</p>
         </div>
       </div>
       <div class="col my-2" >
         <div class="card2 card2-7"  >
           <h3>Township Master Plan</h3>
-          <p>I really have no idea what this is for but here is some placeholder content until dad tells me</p>
+          <p>This is where users can find the latest approved Township Master Plan</p>
         </div>
       </div>
       <div class="col my-2"  onclick="location.href='https://www.google.com/';">
         <div class="card2 card2-8"  >
           <h3>Parks Master Plan</h3>
-          <p>I really have no idea what this is for but here is some placeholder content until dad tells me</p>
+          <p>This is where users can find the latest approved Township Parks Master Plan</p>
         </div>
       </div>
       <div class="col my-2"  onclick="location.href='https://www.google.com/';">
         <div class="card2 card2-9"  >
           <h3>Township Recreation Plan</h3>
-          <p>I really have no idea what this is for but here is some placeholder content until dad tells me</p>
+          <p>This is where users can find the latest approved Township Recreation Master Plan</p>
         </div>
       </div>
       <div class="col my-2"  onclick="location.href='https://www.michigan.gov/sos/0,4670,7-127-1633-49313--,00.html';">
         <div class="card2 card2-10"  >
           <h3>Michigan Voter Information</h3>
-          <p>I really have no idea what this is for but here is some placeholder content until dad tells me</p>
+          <p>Direct link to State of Michigan Election and Voter Information</p>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="row row-cols-auto justify-content-center mx-auto" style="max-width: 1215px;">
+    <div class="col my-2">
+      <div class="card mx-auto my-4 border-secondary officials-card" style="height: 347px;">
+        <div class="card-body">
+          <h5 class="card-title text-center">Forms</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Property Tax Forms</a></li>
+            <li class="list-group-item"><button class="page-link border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Forms/HallRentalAgreement.pdf', 'Lincoln Township Hall Lease Agreement')">Lincoln Township Hall Lease Agreement</button></li>
+            <li class="list-group-item"><button class="page-link border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Forms/LandDivisionApplication.pdf', 'Land Division Application')">Land Division Application</button></li>
+            <li class="list-group-item"><button class="page-link border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Forms/DetailedCostItemization.pdf', 'Detailed Cost Itemization')">Detailed Cost Itemization**</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col my-2" >
+      <div class="card mx-auto my-4 border-secondary officials-card" style="height: 347px;">
+        <div class="card-body">
+          <h5 class="card-title text-center">Permits</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="assets/Permits/ElectricalPermit.pdf" class="page-link border-0">Electrical Permit</a></li>
+            <li class="list-group-item"><a href="assets/Permits/MechanicalPermit.pdf" class="page-link border-0">Mechanical Permit</a></li>
+            <li class="list-group-item"><a href="assets/Permits/PlumbingPermit.pdf" class="page-link border-0">Plumbing Permit</a></li>
+            <li class="list-group-item"><a href="assets/Permits/WaterServicePermit.pdf" class="page-link border-0">Water Service Permit</a></li>
+            <li class="list-group-item"><a href="" class="page-link border-0">Burning Permits**</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col my-2" >
+      <div class="card mx-auto my-4 border-secondary officials-card" >
+        <div class="card-body">
+          <h5 class="card-title text-center">Policies</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="assets/Policy/FoiaProceduresAndGuidlines.pdf" class="page-link border-0">Procedures & Guidelines (Full)</a></li>
+            <li class="list-group-item"><a href="assets/Policy/PublicSummaryFoia.pdf" class="page-link border-0">Procedures & Guidelines (Summary)</a></li>
+            <li class="list-group-item"><a href="assets/Policy/PublicInspectionOfRecords.pdf" class="page-link border-0">Inspection & Copying Public Records Policy</a></li>
+            <li class="list-group-item"><a href="assets/Policy/RulesForPublicComment.pdf" class="page-link border-0">Rules of Conduct for Public Comments</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col my-2" id="zoning-pos">
+      <div class="card mx-auto my-4 border-secondary officials-card" style="height: 347px;">
+        <div class="card-body">
+          <h5 class="card-title text-center">General Township Ordinances</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a  href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Zoning Ordinance</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col my-2">
+      <div class="card mx-auto my-4 border-secondary officials-card" style="height: 647px;">
+        <div class="card-body">
+          <h5 class="card-title text-center">Stand Alone Ordinances</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Junkyard Ordinance</a></li>
+            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Noise Ordinance</a></li>
+            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Fire and Emergency Incident Ordinance</a></li>
+            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Land Division Ordinance</a></li>
+            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Blight Ordinance</a></li>
+            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Solid Waste Ordinance</a></li>
+            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Burning Ordinance</a></li>
+            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Ordinance Enforcement Officer Ordinance</a></li>
+            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Prohibition of Recreational Marihuana Establisments Ordinance</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col my-2">
+      <div class="card mx-auto my-4 border-secondary officials-card" style="height: 420px;">
+        <div class="card-body">
+          <h5 class="card-title text-center">Proposed Zoning Text Amendments</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Fee Schedule</a></li>
+            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Chapter 2 - Definitions</a></li>
+            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Chapter 3 - General Requirements</a></li>
+            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Chapter 6 - Land Use Districts</a></li>
+            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Chapter 7 - Special Land Use Permit Requirements</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col my-2">
+      <div class="card mx-auto my-4 border-secondary officials-card" style="height: 420px;">
+        <div class="card-body">
+          <h5 class="card-title text-center">Zoning Maps</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><button class="page-link border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrc('assets/Maps/zoning.pdf')">Zoning Map</button></li>
+            <li class="list-group-item"><button class="page-link border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrc('assets/Maps/futurelanduse.pdf')">Future Land Use Map</button></li>
+            <li class="list-group-item"><button class="page-link border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrc('assets/Maps/existinglanduse.pdf')">Existing Land Use Map</button></li>
+            <li class="list-group-item"><button class="page-link border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrc('assets/Maps/schooldistrict.pdf')">School District Map</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog custom-modal-size">
+      <div class="modal-content">
+        <div class="modal-header" id="afterme">
+          <h5 class="modal-title" id="modalTitle"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" onclick="download_file()">Download</button>
         </div>
       </div>
     </div>
@@ -97,6 +202,5 @@
   <script src="js/scripts.js"></script>
   <script src="js/footer.js"></script>
   <script src="js/alert.js"></script>
-  <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 </body>
 </html>

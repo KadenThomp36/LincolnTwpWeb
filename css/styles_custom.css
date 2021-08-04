@@ -25,9 +25,17 @@
 }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .content {
   min-height: calc(50vh - 120px);
   /* 80px header + 40px footer = 120px  */
+}
+
+.main-container {
+  padding-top: 50px;
 }
 
 .box-shadow {

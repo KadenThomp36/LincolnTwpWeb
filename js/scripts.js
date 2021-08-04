@@ -55,6 +55,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 var source;
 function setSrc(src){
   source = src;
+  console.log(src);
   if(firstmodal != true){
     document.getElementById('embedpdf').remove();
   }
@@ -62,6 +63,21 @@ function setSrc(src){
   console.log(document.getElementById('afterme'));
   document.getElementById('afterme').insertAdjacentHTML('afterend','<embed src="" type="application/pdf" id="embedpdf" />')
   document.getElementById('embedpdf').src = src;
+  console.log(document.getElementById('embedpdf'))
+}
+
+function setSrcTitle(src, title){
+  source = src;
+  console.log(src);
+  if(firstmodal != true){
+    document.getElementById('embedpdf').remove();
+  }
+  firstmodal =false;
+  console.log(document.getElementById('afterme'));
+  document.getElementById('afterme').insertAdjacentHTML('afterend','<embed src="" type="application/pdf" id="embedpdf" />')
+  document.getElementById('embedpdf').src = src;
+  document.getElementById('modalTitle').innerHTML = title;
+  console.log(document.getElementById('embedpdf'))
 }
 
 /* Helper function */
@@ -98,6 +114,11 @@ function download_file() {
   }
 }
 
+function ScrollOnClick(elementID) {
+  var elementScrollTo = document.getElementById(elementID);
+  console.log(elementScrollTo.offsetTop)
+  scrollTo(0, elementScrollTo.offsetTop);
+}
 
 function clearSearch(){
   const oopsie = document.getElementsByClassName("oops");
