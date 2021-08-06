@@ -48,25 +48,25 @@
           <p>This is where users can find a complete listing of township ordinances</p>
         </div>
       </div>
-      <div class="col my-2" >
+      <div class="col my-2" onclick="ScrollOnClick('zoning-pos')">
         <div class="card2 card2-6"  >
           <h3>Zoning Maps</h3>
           <p>This is where users can find current zoning maps and school district map</p>
         </div>
       </div>
-      <div class="col my-2" >
+      <div class="col my-2" onclick="location.href='assets/Plans/TownshipMasterPlan.pdf'">
         <div class="card2 card2-7"  >
           <h3>Township Master Plan</h3>
           <p>This is where users can find the latest approved Township Master Plan</p>
         </div>
       </div>
-      <div class="col my-2"  onclick="location.href='https://www.google.com/';">
+      <div class="col my-2"  onclick="location.href='assets/Plans/ParksAndRecPlan.pdf';">
         <div class="card2 card2-8"  >
           <h3>Parks Master Plan</h3>
           <p>This is where users can find the latest approved Township Parks Master Plan</p>
         </div>
       </div>
-      <div class="col my-2"  onclick="location.href='https://www.google.com/';">
+      <div class="col my-2"  onclick="location.href='assets/Plans/RecreationPlan.pdf';">
         <div class="card2 card2-9"  >
           <h3>Township Recreation Plan</h3>
           <p>This is where users can find the latest approved Township Recreation Master Plan</p>
@@ -87,10 +87,10 @@
         <div class="card-body">
           <h5 class="card-title text-center">Forms</h5>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Property Tax Forms</a></li>
-            <li class="list-group-item"><button class="page-link border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Forms/HallRentalAgreement.pdf', 'Lincoln Township Hall Lease Agreement')">Lincoln Township Hall Lease Agreement</button></li>
-            <li class="list-group-item"><button class="page-link border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Forms/LandDivisionApplication.pdf', 'Land Division Application')">Land Division Application</button></li>
-            <li class="list-group-item"><button class="page-link border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Forms/DetailedCostItemization.pdf', 'Detailed Cost Itemization')">Detailed Cost Itemization**</a></li>
+            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0 mx-auto">Property Tax Forms</a></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Forms/HallRentalAgreement.pdf', 'Lincoln Township Hall Lease Agreement')">Lincoln Township Hall Lease Agreement</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Forms/LandDivisionApplication.pdf', 'Land Division Application')">Land Division Application</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Forms/DetailedCostItemization.pdf', 'Detailed Cost Itemization')">Detailed Cost Itemization</a></li>
           </ul>
         </div>
       </div>
@@ -100,11 +100,11 @@
         <div class="card-body">
           <h5 class="card-title text-center">Permits</h5>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><a href="assets/Permits/ElectricalPermit.pdf" class="page-link border-0">Electrical Permit</a></li>
-            <li class="list-group-item"><a href="assets/Permits/MechanicalPermit.pdf" class="page-link border-0">Mechanical Permit</a></li>
-            <li class="list-group-item"><a href="assets/Permits/PlumbingPermit.pdf" class="page-link border-0">Plumbing Permit</a></li>
-            <li class="list-group-item"><a href="assets/Permits/WaterServicePermit.pdf" class="page-link border-0">Water Service Permit</a></li>
-            <li class="list-group-item"><a href="" class="page-link border-0">Burning Permits**</a></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="setSrcTitle('assets/Permits/ElectricalPermit.pdf', 'Electrical Permit')">Electrical Permit</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="setSrcTitle('assets/Permits/MechanicalPermit.pdf','Mechanical Permit')">Mechanical Permit</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="setSrcTitle('assets/Permits/PlumbingPermit.pdf', 'Plumbing Permit')">Plumbing Permit</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="setSrcTitle('assets/Permits/WaterServicePermit.pdf', 'Water Service Permit')">Water Service Permit</button></li>
+            <li class="list-group-item"><a href="https://www.michigan.gov/dnr/0,4570,7-350-79136_79237_80917_81046---,00.html" class="page-link border-0 text-center">Burning Permit</a></li>
           </ul>
         </div>
       </div>
@@ -114,10 +114,10 @@
         <div class="card-body">
           <h5 class="card-title text-center">Policies</h5>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><a href="assets/Policy/FoiaProceduresAndGuidlines.pdf" class="page-link border-0">Procedures & Guidelines (Full)</a></li>
-            <li class="list-group-item"><a href="assets/Policy/PublicSummaryFoia.pdf" class="page-link border-0">Procedures & Guidelines (Summary)</a></li>
-            <li class="list-group-item"><a href="assets/Policy/PublicInspectionOfRecords.pdf" class="page-link border-0">Inspection & Copying Public Records Policy</a></li>
-            <li class="list-group-item"><a href="assets/Policy/RulesForPublicComment.pdf" class="page-link border-0">Rules of Conduct for Public Comments</a></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="setSrcTitle('assets/Policy/FoiaProceduresAndGuidlines.pdf','Procedures & Guidelines (Full)')">Procedures & Guidelines (Full)</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="setSrcTitle('assets/Policy/PublicSummaryFoia.pdf','Procedures & Guidelines (Summary)')">Procedures & Guidelines (Summary)</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="setSrcTitle('assets/Policy/PublicInspectionOfRecords.pdf','Inspection & Copying Public Records Policy')">Inspection & Copying Public Records Policy</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="setSrcTitle('assets/Policy/RulesForPublicComment.pdf','Rules of Conduct for Public Comments')">Rules of Conduct for Public Comments</button></li>
           </ul>
         </div>
       </div>
@@ -127,7 +127,7 @@
         <div class="card-body">
           <h5 class="card-title text-center">General Township Ordinances</h5>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><a  href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Zoning Ordinance</a></li>
+            <li class="list-group-item"><a  href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0 text-center">Zoning Ordinance</a></li>
           </ul>
         </div>
       </div>
@@ -137,15 +137,15 @@
         <div class="card-body">
           <h5 class="card-title text-center">Stand Alone Ordinances</h5>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Junkyard Ordinance</a></li>
-            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Noise Ordinance</a></li>
-            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Fire and Emergency Incident Ordinance</a></li>
-            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Land Division Ordinance</a></li>
-            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Blight Ordinance</a></li>
-            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Solid Waste Ordinance</a></li>
-            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Burning Ordinance</a></li>
-            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Ordinance Enforcement Officer Ordinance</a></li>
-            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Prohibition of Recreational Marihuana Establisments Ordinance</a></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="setSrcTitle('assets/Ordinance/JunkyardOrdinance.pdf','Junkyard Ordinance')">Junkyard Ordinance</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="setSrcTitle('assets/Ordinance/NoiseOrdinance.pdf','Noise Ordinance')">Noise Ordinance</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="setSrcTitle('assets/Ordinance/FireEmergencyOrdinance.pdf','Fire and Emergency Incident Ordinance')">Fire and Emergency Incident Ordinance</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="setSrcTitle('assets/Ordinance/LandDivOrdinance.pdf','Land Divsion Ordinance')">Land Division Ordinance</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="setSrcTitle('assets/Ordinance/BlightOrdinance.pdf','Blight Ordinance')">Blight Ordinance</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="setSrcTitle('assets/Ordinance/SolidWasteOrdinance.pdf','Solid Waste Ordinance')">Solid Waste Ordinance</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="setSrcTitle('assets/Ordinance/BurningOrdinance.pdf','Burning Ordinance Ordinance')">Burning Ordinance</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="setSrcTitle('assets/Ordinance/CodeEnforceOfficerOrdinance.pdf','Code Enforcement Officer Ordinance')">Code Enforcement Officer Ordinance</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="setSrcTitle('assets/Ordinance/MarihuanaOrdinance.pdf','Prohibition of Recreational Marihuana Establishments Ordinance')">Prohibition of Recreational Marihuana Establisments Ordinance</button></li>
           </ul>
         </div>
       </div>
@@ -155,24 +155,24 @@
         <div class="card-body">
           <h5 class="card-title text-center">Proposed Zoning Text Amendments</h5>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Fee Schedule</a></li>
-            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Chapter 2 - Definitions</a></li>
-            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Chapter 3 - General Requirements</a></li>
-            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Chapter 6 - Land Use Districts</a></li>
-            <li class="list-group-item"><a href="https://www.michigan.gov/taxes/0,1607,7-238-43535_43537---,00.html" class="page-link border-0">Chapter 7 - Special Land Use Permit Requirements</a></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Maps/zoning.pdf', 'Fee Schedule')">Fee Schedule</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Maps/zoning.pdf', 'Chapter 2 - Definitions')">Chapter 2 - Definitions</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Maps/zoning.pdf', 'Chapter 3 - General Requirements')">Chapter 3 - General Requirements</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Maps/zoning.pdf', 'Chapter 6 - Land Use Districts')">Chapter 6 - Land Use Districts</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Maps/zoning.pdf', 'Chapter 7 - Special Land Use Permit Requirements')">Chapter 7 - Special Land Use Permit Requirements</button></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="col my-2">
-      <div class="card mx-auto my-4 border-secondary officials-card" style="height: 420px;">
+      <div class="card mx-auto my-4 border-secondary officials-card" style="height: 320px;">
         <div class="card-body">
           <h5 class="card-title text-center">Zoning Maps</h5>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><button class="page-link border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrc('assets/Maps/zoning.pdf')">Zoning Map</button></li>
-            <li class="list-group-item"><button class="page-link border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrc('assets/Maps/futurelanduse.pdf')">Future Land Use Map</button></li>
-            <li class="list-group-item"><button class="page-link border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrc('assets/Maps/existinglanduse.pdf')">Existing Land Use Map</button></li>
-            <li class="list-group-item"><button class="page-link border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrc('assets/Maps/schooldistrict.pdf')">School District Map</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Maps/zoning.pdf', 'Zoning Map')">Zoning Map</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Maps/futurelanduse.pdf', 'Future Land Use Map')">Future Land Use Map</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Maps/existinglanduse.pdf', 'Existing Land Use Map')">Existing Land Use Map</button></li>
+            <li class="list-group-item"><button class="page-link border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Maps/schooldistrict.pdf', 'School District Map')">School District Map</button></li>
           </ul>
         </div>
       </div>

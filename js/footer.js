@@ -27,22 +27,22 @@ class Footer extends HTMLElement {
           <div class="col-md-3 footer-nav">
                 <ul class="list">
                   <h4>Useful Links</h4>
-                    <li><a href="#">Property Tax Information</a></li>
-                    <li><a href="#">Forms, Permits, and Policies</a></li>
-                    <li><a href="#">Water District #1</a></li>
-                    <li><a href="#">Trash Collection</a></li>
-                    <li><a href="#">Zoning Ordinances</a></li>
-                    <li><a href="#">Michigan Voter Information</a></li>
+                    <li><a href="https://is.bsasoftware.com/bsa.is/AssessingServices/ServiceAssessingSearch.aspx?i=1&appid=0&unit=314/">Property Tax Information</a></li>
+                    <li><a href="UsefulLinks.html">Forms, Permits, and Policies</a></li>
+                    <li><a href="UsefulLinks.html">Water District #1</a></li>
+                    <li><a href="https://www.republicservices.com/">Trash Collection</a></li>
+                    <li><a href="UsefulLinks.html">Zoning Ordinances</a></li>
+                    <li><a href="https://www.michigan.gov/sos/0,4670,7-127-1633-49313--,00.html">Michigan Voter Information</a></li>
                 </ul>
             </div>
         
       <div class="col-md-3 footer-nav">
           <h4>Plans</h4>
           <ul class="list">
-              <li><a href="#">Zoning Maps</a></li>
-              <li><a href="#">Township Master Plan</a></li>
-              <li><a href="#">Parks Master Plan</a></li>
-              <li><a href="#">Township Recreation Plan</a></li>
+              <li><a href="UsefulLinks.html">Zoning Maps</a></li>
+              <li><a href="UsefulLinks.html">Township Master Plan</a></li>
+              <li><a href="UsefulLinks.html">Parks Master Plan</a></li>
+              <li><a href="UsefulLinks.html">Township Recreation Plan</a></li>
             </ul>
         </div>
       

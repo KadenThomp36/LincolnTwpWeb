@@ -113,13 +113,8 @@
             </div>
             <div class="col-md-auto mx-auto mb-3 text-center">
               <h6 class="text-white">Hours Of Operation</h6>
-              <p class="card-text text-white">M: 12:00 - 12:00</p>
-              <p class="card-text text-white">T: 12:00 - 12:00</p>
-              <p class="card-text text-white">W: 12:00 - 12:00</p>
-              <p class="card-text text-white">Th: 12:00 - 12:00</p>
-              <p class="card-text text-white">F: 12:00 - 12:00</p>
-              <p class="card-text text-white">Sa: 12:00 - 12:00</p>
-              <p class="card-text text-white">Sun: 12:00 - 12:00</p>
+              <p class="card-text text-white">Monday through Sunday the park is open Sunrise to Sunset. <br> Please take some time and review the park rules below</p>
+              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/parkRules.pdf', 'Lincoln Township Park Rules')">Park Rules</button>
             </div>
             <div class="col-md-auto mx-auto">
               <div style="width: 100%;">
@@ -130,6 +125,22 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog custom-modal-size">
+      <div class="modal-content">
+        <div class="modal-header" id="afterme">
+          <h5 class="modal-title" id="modalTitle"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" onclick="download_file()">Download</button>
         </div>
       </div>
     </div>
