@@ -116,6 +116,19 @@ html {
   margin: 1.75rem auto;
 }
 
+.custom-modal-size-2 {
+  max-width: 960px;
+  margin: 1.75rem auto;
+}
+
+.footer-disclaimer-link {
+  color: rgba(255,255,255,0.40);
+}
+
+.footer-disclaimer-link:hover {
+  color: #dc3545;
+}
+
 embed{
   height: 1100px;
   width: auto;

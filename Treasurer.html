@@ -64,18 +64,18 @@
                   <a href="https://www.govpaynow.com/gps/user/plc/9130" class="btn btn-danger text-center">Pay Property Tax</a>
                 </div>
                 <div class="col text-center d-grid mb-2">
-                  <a href="EOfficials.html" class="btn btn-danger text-center">Pay Permit Fees</a>
+                  <a href="https://www.govpaynow.com/gps/user/plc/9131" class="btn btn-danger text-center">Pay Permit Fees</a>
                 </div>
               </div>
               <div class="row border-bottom mb-2">
                 <div class="col text-center d-grid mb-2">
-                  <a href="EOfficials.html" class="btn btn-danger text-center">Property Tax Estimator</a>
+                  <button class="btn btn-danger text-center" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrc('https://treas-secure.state.mi.us/ptestimator/ptestimator.asp')">Property Tax Estimator</button>
                 </div>
               </div>
               <div class="row">
                 <h6>Application</h6>
                 <div class="col text-center d-grid mb-2">
-                  <a href="EOfficials.html" class="btn btn-danger text-center">Summer Tax Differment Application</a>
+                  <button class="btn btn-danger text-center" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrc('https://www.michigan.gov/documents/homestead1_2541_7.pdf')">Summer Tax Deferment Application</button>
                 </div>
               </div>
             </div>
@@ -106,13 +106,6 @@
             <li>Maintain accurate records of all income, receipts and disbursements.</li>
             <li>Deposit all receipts in the Township depository or depositories.</li>
           </ul>
-          <div class="card w-100 mb-2">
-            <div class="card-body">
-              <h5 class="card-title">Links</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Button</a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -194,32 +187,16 @@
   </div>
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog custom-modal-size">
+    <div class="modal-dialog custom-modal-size-2">
       <div class="modal-content">
         <div class="modal-header" id="afterme">
-          <h5 class="modal-title" id="exampleModalLabel">Meeting Information</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Property Tax Estimator</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-danger" onclick="download_file()">Download</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog custom-modal-size">
-      <div class="modal-content">
-        <div class="modal-header" id="afterme">
-          <h5 class="modal-title" id="exampleModalLabel">Meeting Information</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-danger" onclick="download_file()">Download</button>
+          <button type="button" class="btn btn-danger" onclick="location.href='https://treas-secure.state.mi.us/ptestimator/ptestimator.asp';">View Externally</button>
         </div>
       </div>
     </div>
