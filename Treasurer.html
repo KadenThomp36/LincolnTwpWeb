@@ -75,8 +75,8 @@
               <div class="row">
                 <h6>Application</h6>
                 <div class="col text-center d-grid mb-2">
-                  <button class="btn btn-danger text-center" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrc('https://www.michigan.gov/documents/homestead1_2541_7.pdf')">Summer Tax Deferment Application</button>
-                  <button class="btn btn-danger text-center" data-bs-toggle="modal" data-bs-target="#NameChangeModal">Property Tax Estimator</button>
+                  <button class="btn btn-danger text-center mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrc('https://www.michigan.gov/documents/homestead1_2541_7.pdf')">Summer Tax Deferment Application</button>
+                  <button class="btn btn-danger text-center" data-bs-toggle="modal" data-bs-target="#NameChangeModal">Name and/or Address Change</button>
                 </div>
               </div>
             </div>
@@ -186,15 +186,6 @@
     </div>
 
   </div>
-  <form id="my-form" name="my-form" method="post" action="https://www.cmu.edu/cgi-bin/mailto">
-    <input name="MailTo" type="hidden" value="primary@andrew.cmu.edu" />
-    <input name="MailCC" type="hidden" value="secondary@andrew.cmu.edu" />
-    <input name="EmailForm" type="hidden" value="https://www.cmu.edu/my-site/email-message-template/email-message.txt" />
-    <p>Name <input name="Name" type="text" /></p>
-    <p>Email Address <input name="Email" type="text"/></p>
-    <p>Phone Number <input name="Phone" type="text" /></p>
-    <p><input type="submit" name="Submit" value="Submit" /></p>
-    </form>
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog custom-modal-size-2">
@@ -216,7 +207,7 @@
     <div class="modal-dialog custom-modal-size-2">
       <div class="modal-content">
         <div class="modal-header" id="afterme">
-          <h5 class="modal-title" id="ModalLabel">Property Tax Estimator</h5>
+          <h5 class="modal-title" id="ModalLabel">Name and/or Address Change</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <form method="post" action="send_mail.php">
@@ -243,15 +234,6 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-  <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
 
   <lincoln-footer></lincoln-footer>
