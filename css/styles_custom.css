@@ -129,12 +129,12 @@ html {
   color: #dc3545;
 }
 
-embed{
+object{
   height: 1100px;
   width: auto;
 }
 @media(max-width: 768px){
-  embed{
+  object{
     width: auto; 
     height: 568px;
   }
@@ -250,7 +250,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .btn {
   -webkit-appearance: none;
 }
-embed {
+object {
   height: calc(100vh - 200px);
   overflow-y: auto;
 }

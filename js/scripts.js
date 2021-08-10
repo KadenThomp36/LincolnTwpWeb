@@ -61,8 +61,8 @@ function setSrc(src){
   }
   firstmodal =false;
   console.log(document.getElementById('afterme'));
-  document.getElementById('afterme').insertAdjacentHTML('afterend','<embed src="" type="application/pdf" id="embedpdf" />')
-  document.getElementById('embedpdf').src = src;
+  document.getElementById('afterme').insertAdjacentHTML('afterend','<object data="" id="embedpdf"></object>')
+  document.getElementById('embedpdf').data = src;
   console.log(document.getElementById('embedpdf'))
 }
 
@@ -74,8 +74,8 @@ function setSrcTitle(src, title){
   }
   firstmodal =false;
   console.log(document.getElementById('afterme'));
-  document.getElementById('afterme').insertAdjacentHTML('afterend','<embed src="" type="application/pdf" id="embedpdf" />')
-  document.getElementById('embedpdf').src = src;
+  document.getElementById('afterme').insertAdjacentHTML('afterend','<object data="" id="embedpdf"></object>')
+  document.getElementById('embedpdf').data = src;
   document.getElementById('modalTitle').innerHTML = title;
   console.log(document.getElementById('embedpdf'))
 }
