@@ -53,6 +53,9 @@ html {
 
 .page-link {
   color: #dc3545!important;
+  padding: 0px!important;;
+  margin: 0px!important;
+  width: 100%!important;
 }
 
 .page-link:hover {
@@ -60,10 +63,19 @@ html {
 }
 
 .officials-card {
-  width: 19rem;
+  width: 14.5rem;
 }
 @media only screen and (max-width: 600px) {
   .officials-card {
+    width: 17rem;
+  }
+}
+
+.links-card {
+  width: 19rem;
+}
+@media only screen and (max-width: 600px) {
+  .lins-card {
     width: 17rem;
   }
 }
