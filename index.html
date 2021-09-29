@@ -20,7 +20,6 @@
 
   <lincoln-header></lincoln-header>
 
-
   <!-- Page content-->
   <div class="container-fluid bg-light  main-container">
     
@@ -71,21 +70,22 @@
           <div class="col rounded-3">
             <div class="list-group rounded-3" id="list-tab" role="tablist">
               <a class="list-group-item list-group-item-action active rounded-3" id="news-item-one" data-toggle="list"
-                href="#news-one" role="tab" aria-controls="news-item-one"><strong>Trash & Recycling</strong></a>
+                href="#news-one" role="tab" aria-controls="news-item-one"><strong>New Webiste</strong></a>
               <a class="list-group-item list-group-item-action rounded-3" id="news-item-two" data-toggle="list"
-                href="#news-two" role="tab" aria-controls="news-item-two"><strong>New Website</strong></a>
+                href="#news-two" role="tab" aria-controls="news-item-two"><strong>Hall Rental</strong></a>
             </div>
           </div>
-          <div class="col pt-4 px-4 scrollTwo">
+          <div class="col pt-4 px-4 scrollOne">
             <!--Make sure this always matches the number of news stories, if there are ever more than 4 let me know (not cuurently supported)-->
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="news-one" role="tabpanel" aria-labelledby="news-item-one">
-                <h4 class="text-muted">08/02/2021</h4>
-                <p><strong>As of August, trash and recycling pickup has resumed normal operation.</strong></p>
-              </div>
-              <div class="tab-pane fade" id="news-two" role="tabpanel" aria-labelledby="news-item-two">
                 <h4 class="text-muted">08/10/2021</h4>
                 <p><strong>The Lincoln Township website has been updated. Feel free to take a look around!</strong></p>
+              </div>
+              <div class="tab-pane fade" id="news-two" role="tabpanel" aria-labelledby="news-item-two">
+                <h4 class="text-muted">Hall Rental</h4>
+                <p><strong>To rent the Lincoln Township Hall please fill download and fill out the following form.</strong></p>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Forms/HallRentalAgreement.pdf', 'Lincoln Township Hall Rental Agreement')">Hall Rental Agreement</button>
               </div>
             </div>
           </div>
