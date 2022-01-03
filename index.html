@@ -65,22 +65,24 @@
       </div>
 
       <div class="col m-auto shadow rounded-3 p-2 mb-3">
-        <h3 class="border-bottom pb-2">News and Updates</h3>
+        <h3 class="border-bottom pb-2">News and Information</h3>
         <div class="row-cols-auto" style="max-width: 500px; height: 300px;">
           <div class="col rounded-3">
             <div class="list-group rounded-3" id="list-tab" role="tablist">
               <a class="list-group-item list-group-item-action active rounded-3" id="news-item-one" data-toggle="list"
-                href="#news-one" role="tab" aria-controls="news-item-one"><strong>Building Permit Inquiries</strong></a>
+                href="#news-one" role="tab" aria-controls="news-item-one"><strong>Important Dates 2022</strong></a>
               <a class="list-group-item list-group-item-action rounded-3" id="news-item-two" data-toggle="list"
                 href="#news-two" role="tab" aria-controls="news-item-two"><strong>Hall Rental</strong></a>
             </div>
           </div>
-          <div class="col pt-4 px-4 scrollOne">
+          <div class="col pt-4 px-4 scrollTwo">
             <!--Make sure this always matches the number of news stories, if there are ever more than 4 let me know (not cuurently supported)-->
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="news-one" role="tabpanel" aria-labelledby="news-item-one">
                 <h4 class="text-muted">11/18/2021</h4>
-                <p><strong>For all building permit related inquiries please call Kevin Wray at <a href="tel:989-205-4377">989-205-4377</a></strong></p>
+                <p><strong>Take a look at upcomming important dates by clicking on the corresponding buttons</strong></p>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Images/LincolnRecycleCal.pdf', 'Lincoln Township Recycling Calendar')">Recycling Schedule</button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/2022BoardOfReviewDates.pdf', '2022 Board Of Review Dates')">2022 Board Of Review Dates</button>
               </div>
               <div class="tab-pane fade" id="news-two" role="tabpanel" aria-labelledby="news-item-two">
                 <h4 class="text-muted">Hall Rental</h4>
