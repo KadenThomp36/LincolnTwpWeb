@@ -1,4 +1,4 @@
-### LincolnTwpWeb
+# LincolnTwpWeb
 
 ## Maintained By
 
@@ -7,11 +7,11 @@
 
 ## External Dependancies
 
-# Deployments
+### Deployments
 
 - https://www.deployhq.com/
 
-# Webhost
+### Webhost
 
 -  https://www.godaddy.com/hosting/web-hosting
 
