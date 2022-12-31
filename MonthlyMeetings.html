@@ -55,6 +55,7 @@
         <select onchange="YearChanged()" class="form-select form-select-lg mt-3" id="year-list"
           style="min-width: 300px; max-width: 400px;" aria-label=".form-select-lg example" disabled>
           <option selected disabled value="">--Year--</option>
+          <option value="2023" class="year">2023</option>
           <option value="2022" class="year">2022</option>
           <option value="2021" class="year">2021</option>
           <option value="2020" class="year">2020</option>
@@ -102,6 +103,111 @@
 
   <div class="container-fluid bg-light">
     <!--Board Meetings-->
+    <!--2023 Board Meetings-->
+    <div id="2023bm" class="mx-auto d-none table-holder" style="max-width: 1300px;">
+      <h1>2023 Board Meetings</h1>
+      <p style="max-width: 500px;" class="lead">Meetings are held on the <strong>2nd Tuesday</strong> of each month at
+        the <a href="https://goo.gl/maps/piPSR82zw8zMaiNy7" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
+          title="Click for Directions" style="color: black;"><strong>Lincoln Township Hall.</strong></a> Meetings begin
+        at <em>7:00pm Unless otherwise specified</em></p>
+      <div class="box-shadow">
+        <table class="table table-striped align-middle mx-auto">
+          <thead>
+            <tr>
+              <th scope="col" class="sticky-table-head"  class="sticky-table-head">Date</th>
+              <th scope="col"  class="sticky-table-head">Agenda</th>
+              <th scope="col"  class="sticky-table-head">Meeting Minutes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">January 10th</th>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/janmtg/janagnd.pdf')">View</button></td>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/janmtg/janmin.pdf')">View</button></td>
+            </tr>
+            <tr>
+              <th scope="row">February 14th</th>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/febmtg/febagnd.pdf')">View</button></td>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/febmtg/febmin.pdf')">View</button></td>
+            </tr>
+            <tr>
+              <th scope="row">March 14th</th>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/marmtg/maragnd.pdf')">View</button></td>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/marmtg/marmin.pdf')">View</button></td>
+            </tr>
+            <tr>
+              <th scope="row">April 11th<br></th>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/aprmtg/apragnd.pdf')">View</button></td>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/aprmtg/aprmin.pdf')">View</button></td>
+            </tr>
+            <tr>
+              <th scope="row">May 9th</th>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/maymtg/mayagnd.pdf')">View</button></td>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/maymtg/maymin.pdf')">View</button></td>
+            </tr>
+            <tr>
+              <th scope="row">June 13th</th>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/junmtg/junagnd.pdf')">View</button></td>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/junmtg/junmin.pdf')">View</button></td>
+            </tr>
+            <tr>
+              <th scope="row">July 11th</th>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/julmtg/julagnd.pdf')">View</button></td>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/julmtg/julmin.pdf')">View</button></td>
+            </tr>
+            <tr>
+              <th scope="row">August 8th</th>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/augmtg/augagnd.pdf')">View</button></td>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/augmtg/augmin.pdf')">View</button></td>
+            </tr>
+            <tr>
+              <th scope="row">September 12th</th>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/sepmtg/sepagnd.pdf')">View</button></td>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/sepmtg/sepmin.pdf')">View</button></td>
+            </tr>
+            <tr>
+              <th scope="row">October 10th</th>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/octmtg/octagnd.pdf')">View</button></td>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/octmtg/octmin.pdf')">View</button></td>
+            </tr>
+            <tr>
+              <th scope="row">November 14th</th>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/novmtg/novagnd.pdf')">View</button></td>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/novmtg/novmin.pdf')">View</button></td>
+            </tr>
+            <tr>
+              <th scope="row">December 12th</th>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/decmtg/decagnd.pdf')">View</button></td>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023b/decmtg/decmin.pdf')">View</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
     <!--2022 Board Meetings-->
     <div id="2022bm" class="mx-auto d-none table-holder" style="max-width: 1300px;">
       <h1>2022 Board Meetings</h1>
@@ -2483,6 +2589,68 @@
     </div>
 
     <!--Planning Commission Meetings-->
+    <!--2022 planning Commission Meetings-->
+    <div id="2023pm" class="mx-auto d-none table-holder" style="max-width: 1300px;">
+      <h1>2023 Planning Commission Meetings</h1>
+      <p style="max-width: 500px;" class="lead">Meetings are held at the <a href="https://goo.gl/maps/piPSR82zw8zMaiNy7" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
+          title="Click for Directions" style="color: black;"><strong>Lincoln Township Hall.</strong></a> Meetings begin
+        at <em>6:30pm Unless otherwise specified</em></p>
+      <div class="box-shadow">
+        <table class="table table-striped align-middle mx-auto">
+          <thead>
+            <tr>
+              <th scope="col" class="sticky-table-head">Date</th>
+              <th scope="col" class="sticky-table-head">Agenda</th>
+              <th scope="col" class="sticky-table-head">Meeting Minutes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">January 3rd</th>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023p/janmtg/janagnd.pdf')">View</button></td>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023p/janmtg/janmin.pdf')">View</button></td>
+            </tr>
+            <tr>
+              <th scope="row">March 7th</th>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023p/marmtg/maragnd.pdf')">View</button></td>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023p/marmtg/marmin.pdf')">View</button></td>
+            </tr>
+            <tr>
+              <th scope="row">May 2nd</th>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023p/maymtg/mayagnd.pdf')">View</button></td>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023p/maymtg/maymin.pdf')">View</button></td>
+            </tr>
+            <tr>
+              <th scope="row">July 18th</th>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023p/julmtg/julagnd.pdf')">View</button></td>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023p/julmtg/julmin.pdf')">View</button></td>
+            </tr>
+            <tr>
+              <th scope="row">September 5th</th>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023p/sepmtg/sepagnd.pdf')">View</button></td>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023p/sepmtg/sepmin.pdf')">View</button></td>
+            </tr>
+            <tr>
+              <th scope="row">November 7th</th>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023p/novmtg/novagnd.pdf')">View</button></td>
+              <td><button type="button" class="btn btn-danger customDisabled" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="setSrc('brdmtgs/2023p/novmtg/novmin.pdf')">View</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
     <!--2022 planning Commission Meetings-->
     <div id="2022pm" class="mx-auto d-none table-holder" style="max-width: 1300px;">
       <h1>2022 Planning Commission Meetings</h1>
