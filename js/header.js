@@ -67,6 +67,10 @@ class customHeader extends HTMLElement {
                 <li><a class="dropdown-item" href="Treasurer.html">Treasurer</a></li>
                 <li><a class="dropdown-item" href="Trustees.html">Trustees</a></li>
                 <li>
+                <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="Assessor.html">Assessor</a></li>
+                <li>
                   <hr class="dropdown-divider" />
                 </li>
                 <li><a class="dropdown-item" href="EOfficials.html"> Elected Officials</a></li>
