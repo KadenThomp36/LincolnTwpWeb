@@ -6,21 +6,44 @@ function generateTableRow(
   disabledMin = false,
   disabledAgen = false,
   special = false,
+  budget = false,
+  subText = ``,
   agendaPathOverride,
   minutesPathOverride
 ) {
   let agendaPath = agendaPathOverride;
   let minutesPath = minutesPathOverride;
   if (!agendaPathOverride) {
-    agendaPath = generatePath(year, month, boardMeeting, true, special);
+    agendaPath = generatePath(year, month, boardMeeting, true, special, budget);
   }
   if (!minutesPathOverride) {
-    minutesPath = generatePath(year, month, boardMeeting, false, special);
+    minutesPath = generatePath(
+      year,
+      month,
+      boardMeeting,
+      false,
+      special,
+      budget
+    );
   }
   const row = document.createElement("tr");
 
   const dateCell = document.createElement("th");
-  dateCell.textContent = `${month} ${day}`;
+
+  if (subText) {
+    dateCell.innerHTML = `${month} ${day}<br><small class="text-muted">${subText}</small>`;
+  } else {
+    dateCell.textContent = `${month} ${day}`;
+  }
+
+  if (special) {
+    dateCell.innerHTML = `${month} ${day}<br><small class="text-muted">Special Meeting <u>6:00pm</u></small>`;
+  }
+
+  if (budget) {
+    dateCell.innerHTML = `${month} ${day}<br><small class="text-muted">Budget Meeting Workshop <u>6:00pm</u></small>`;
+  }
+
   row.appendChild(dateCell);
 
   const agendaCell = document.createElement("td");
@@ -45,9 +68,8 @@ function generateTableRow(
   minutesButton.type = "button";
   minutesButton.className = "btn btn-danger";
   if (disabledMin) {
-    agendaButton.className = agendaButton.className + " customDisabled";
+    minutesButton.className = agendaButton.className + " customDisabled";
   }
-  minutesButton;
 
   minutesButton.dataset.bsToggle = "modal";
   minutesButton.dataset.bsTarget = "#exampleModal";
@@ -61,7 +83,7 @@ function generateTableRow(
   return row;
 }
 
-function generatePath(year, month, boardMeeting, agenda, special) {
+function generatePath(year, month, boardMeeting, agenda, special, budget) {
   let path = "";
   let monthTrim = month.substring(0, 3);
   if (boardMeeting) {
@@ -72,10 +94,6 @@ function generatePath(year, month, boardMeeting, agenda, special) {
 
   path += monthTrim + "mtg";
 
-  if (special) {
-    path += "-spcl";
-  }
-
   path += "/" + monthTrim;
   if (agenda) {
     path += "agnd";
@@ -85,6 +103,10 @@ function generatePath(year, month, boardMeeting, agenda, special) {
 
   if (special) {
     path += "-spcl";
+  }
+
+  if (budget) {
+    path += "-budg";
   }
 
   path += ".pdf";
@@ -107,18 +129,11 @@ function generateTable(year, meetings, boardMeeting) {
   const p = document.createElement("p");
   p.className = "lead";
   p.style.maxWidth = "500px";
-  p.textContent = `Meetings are held on the 2nd Tuesday of each month at the Lincoln Township Hall. Meetings begin at 7:00pm unless otherwise specified.`;
+  p.innerHTML = `Meetings are held on the <strong>2nd Tuesday</strong> of each month at
+  the <a href="https://goo.gl/maps/piPSR82zw8zMaiNy7" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
+    title="Click for Directions" style="color: black;"><strong>Lincoln Township Hall.</strong></a> Meetings begin
+  at <em>7:00pm Unless otherwise specified</em>`;
 
-  const a = document.createElement("a");
-  a.href = "https://goo.gl/maps/piPSR82zw8zMaiNy7";
-  a.target = "_blank";
-  a.dataset.bsToggle = "tooltip";
-  a.dataset.bsPlacement = "top";
-  a.title = "Click for Directions";
-  a.style.color = "black";
-  a.textContent = "Lincoln Township Hall";
-
-  p.appendChild(a);
   outerDiv.appendChild(p);
 
   const innerDiv = document.createElement("div");
@@ -152,6 +167,8 @@ function generateTable(year, meetings, boardMeeting) {
       meeting.disabledMin,
       meeting.disabledAgen,
       meeting.special,
+      meeting.budget,
+      meeting.subText,
       meeting.agendaPath,
       meeting.minutesPath
     );
@@ -164,11 +181,29 @@ function generateTable(year, meetings, boardMeeting) {
   container.appendChild(outerDiv);
 }
 
+function generateYear(years) {
+  const container = document.getElementById("year-list");
+  years.reverse();
+  years.forEach((year) => {
+    const innerOption = document.createElement("option");
+    innerOption.value = year;
+    innerOption.classList = "year";
+    innerOption.innerHTML = `${year}`;
+
+    container.appendChild(innerOption);
+  });
+}
+
 async function init() {
+  const years = [];
   // Use the imported meetingsData instead of fetchMeetingsData
   for (const [year, meetings] of Object.entries(meetingDataBoard)) {
+    if (!years.find((element) => element === year)) {
+      years.push(year);
+    }
     await generateTable(year, meetings, true);
   }
+  await generateYear(years);
 }
 
 init();

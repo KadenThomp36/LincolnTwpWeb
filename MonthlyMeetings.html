@@ -1,153 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Lincoln Township</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/Images/icon.png" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <title>Lincoln Township</title>
-  <!-- Favicon-->
-  <link rel="icon" type="image/x-icon" href="assets/Images/icon.png" />
-  <!-- Core theme CSS (includes Bootstrap)-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="css/styles_custom.css" rel="stylesheet" />
+    <link href="css/fancy_button.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <script type="text/javascript" src="js/header_.js"></script>
+  </head>
 
-  <link href="css/styles_custom.css" rel="stylesheet">
-  <link href="css/fancy_button.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-  <script type="text/javascript" src="js/header_.js"></script>
-</head>
+  <body onload="currentPage('meetings')">
+    <lincoln-header></lincoln-header>
 
-<body onload="currentPage('meetings')">
+    <!-- Page content-->
 
-  <lincoln-header></lincoln-header>
+    <div
+      class="h-auto mb-4 container-fluid mx-auto main-container"
+      style="max-width: 1300px"
+    >
+      <lincoln-alert></lincoln-alert>
 
-  <!-- Page content-->
-
-  <div class="h-auto mb-4 container-fluid mx-auto  main-container" style="max-width: 1300px;">
-    <lincoln-alert></lincoln-alert>
-
-    <div class="row mb-1 align-items-end">
-      <div class="col" style="max-width: 400px;">
-
-        <select id="meeting-list" class="form-select form-select-lg" onchange="meetingChanged()"
-          style="min-width: 300px; max-width: 400px;" aria-label=".form-select-lg example">
-          <option selected disabled value="">--Meeting Type--</option>
-          <option value="bm" class="meeting">Board Meetings</option>
-          <option value="pm" class="meeting">Planning Commission Meetings</option>
-        </select>
-        <p class="text-danger d-none mb-0" id="err-meeting">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-            class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
-            <path
-              d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z" />
-            <path
-              d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z" />
-          </svg>
-          Please Select a Meeting Type
-        </p>
-
-      </div>
-    </div>
-    <div class="row mb-1 align-items-end">
-      <div class="col" style="max-width: 400px;">
-        <select onchange="YearChanged()" class="form-select form-select-lg mt-3" id="year-list"
-          style="min-width: 300px; max-width: 400px;" aria-label=".form-select-lg example" disabled>
-          <option selected disabled value="">--Year--</option>
-          <option value="2024" class="year">2024</option>
-          <option value="2023" class="year">2023</option>
-          <option value="2022" class="year">2022</option>
-          <option value="2021" class="year">2021</option>
-          <option value="2020" class="year">2020</option>
-          <option value="2019" class="year">2019</option>
-          <option value="2018" class="year">2018</option>
-          <option value="2017" class="year">2017</option>
-          <option value="2016" class="year">2016</option>
-          <option value="2015" class="year">2015</option>
-          <option value="2014" class="year">2014</option>
-          <option value="2013" class="year">2013</option>
-          <option value="2012" class="year">2012</option>
-          <option value="2011" class="year">2011</option>
-          <option value="2010" class="year">2010</option>
-          <option value="2009" class="year">2009</option>
-          <option value="2008" class="year">2008</option>
-          <option value="2007" class="year">2007</option>
-          <option value="2006" class="year">2006</option>
-          <option value="2005" class="year">2005</option>
-          <option value="2004" class="year">2004</option>
-          <option value="2003" class="year">2003</option>
-        </select>
-
-      </div>
-
-    </div>
-    <div class="row mb-1 align-items-end">
-      <div class="col" style="max-width: 400px;">
-        <p class="text-danger d-none mb-0" id="err-year">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-            class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
-            <path
-              d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z" />
-            <path
-              d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z" />
-          </svg>
-          Please Select a Year
-        </p>
-      </div>
-    </div>
-    <div class="col-md-auto mt-3">
-      <button class="btn-hover-f color-11" style="width: 150px; height: 50px;"
-        onclick="dispalyFilterError(); displayMeetingYear()" id="button-filter">Submit</button>
-    </div>
-  </div>
-
-  <div class="container-fluid bg-light">
-    <!--Board Meetings-->
-        <!--2024 Board Meetings-->
-        <div id="meetingsContainer" class="mx-auto table-holder" style="max-width: 1300px;">
-        </div>
-    <div class="bs-component table-holder mx-auto align-middle my-auto" style="max-width: 1300px; min-height: 500px;">
-      <div class="jumbotron">
-        <h1 class="display-3">Get Started</h1>
-        <p class="lead">Use the drop down boxes to filter meetings by type and year.<br>Click "Submit" to find archives of Township Meetings.</p>
-        <hr class="my-4">
-        <p>Meeting Minutes and Agendas may be downloaded using the "Download" button in the bottom right when viewing files. <br><small>*Note meetings with a dark red button may be missing content.</small></p>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="modal fade modal-dialog-scrollable" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog custom-modal-size">
-      <div class="modal-content">
-        <div class="modal-header" id="afterme">
-          <h5 class="modal-title" id="exampleModalLabel">Meeting Information</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-danger" onclick="download_file()">Download</button>
+      <div class="row mb-1 align-items-end">
+        <div class="col" style="max-width: 400px">
+          <select
+            id="meeting-list"
+            class="form-select form-select-lg"
+            onchange="meetingChanged()"
+            style="min-width: 300px; max-width: 400px"
+            aria-label=".form-select-lg example"
+          >
+            <option selected disabled value="">--Meeting Type--</option>
+            <option value="bm" class="meeting">Board Meetings</option>
+            <option value="pm" class="meeting">
+              Planning Commission Meetings
+            </option>
+          </select>
+          <p class="text-danger d-none mb-0" id="err-meeting">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-exclamation-triangle"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"
+              />
+              <path
+                d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"
+              />
+            </svg>
+            Please Select a Meeting Type
+          </p>
         </div>
       </div>
+      <div class="row mb-1 align-items-end">
+        <div class="col" style="max-width: 400px">
+          <select
+            onchange="YearChanged()"
+            class="form-select form-select-lg mt-3"
+            id="year-list"
+            style="min-width: 300px; max-width: 400px"
+            aria-label=".form-select-lg example"
+            disabled
+          >
+            <option selected disabled value="">--Year--</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mb-1 align-items-end">
+        <div class="col" style="max-width: 400px">
+          <p class="text-danger d-none mb-0" id="err-year">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-exclamation-triangle"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"
+              />
+              <path
+                d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"
+              />
+            </svg>
+            Please Select a Year
+          </p>
+        </div>
+      </div>
+      <div class="col-md-auto mt-3">
+        <button
+          class="btn-hover-f color-11"
+          style="width: 150px; height: 50px"
+          onclick="dispalyFilterError(); displayMeetingYear()"
+          id="button-filter"
+        >
+          Submit
+        </button>
+      </div>
     </div>
-  </div>
 
-  <lincoln-footer></lincoln-footer>
+    <div class="container-fluid bg-light">
+      <!--Board Meetings-->
+      <!--2024 Board Meetings-->
+      <div
+        id="meetingsContainer"
+        class="mx-auto table-holder"
+        style="max-width: 1300px"
+      ></div>
+      <div
+        class="bs-component table-holder mx-auto align-middle my-auto"
+        style="max-width: 1300px; min-height: 500px"
+      >
+        <div class="jumbotron">
+          <h1 class="display-3">Get Started</h1>
+          <p class="lead">
+            Use the drop down boxes to filter meetings by type and year.<br />Click
+            "Submit" to find archives of Township Meetings.
+          </p>
+          <hr class="my-4" />
+          <p>
+            Meeting Minutes and Agendas may be downloaded using the "Download"
+            button in the bottom right when viewing files. <br /><small
+              >*Note meetings with a dark red button may be missing
+              content.</small
+            >
+          </p>
+        </div>
+      </div>
+    </div>
 
-  
+    <div
+      class="modal fade modal-dialog-scrollable"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog custom-modal-size">
+        <div class="modal-content">
+          <div class="modal-header" id="afterme">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Meeting Information
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <script src="js/scripts.js"></script>
-  <script src="js/footer.js"></script>
-  <script src="js/alert.js"></script>
-  <script src="js/meetingData.js"></script>
-  <script src="js/meetingBuilder.js"></script>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              onclick="download_file()"
+            >
+              Download
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <lincoln-footer></lincoln-footer>
 
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/alert.js"></script>
+    <script src="js/meetingData.js"></script>
+    <script src="js/meetingBuilder.js"></script>
+  </body>
 </html>
