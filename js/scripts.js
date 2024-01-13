@@ -180,12 +180,16 @@ function displayMeetingYear() {
   table_to_disp = year_val + meeting_val;
   const tables = document.getElementsByClassName("table-holder");
   for (let i = 0; i < tables.length; i++) {
+    if (tables[i].id !== 'meetingsContainer') {
     tables[i].classList.add("d-none");
     console.log(tables[i].id)
     if (tables[i].id == table_to_disp){
       console.log(tables[i].id + "removed")
       tables[i].classList.remove("d-none");
+      console.log(tables);
+      console.log(tables[i])
     }
+  }
 }
 }
 
