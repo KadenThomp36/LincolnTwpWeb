@@ -1,6 +1,14 @@
 const meetingDataBoard = {
   2024: [
     {
+      month: "January",
+      day: "9th",
+      disabledAgen: false,
+      disabledMin: true,
+      special: false,
+      budget: false
+    },
+    {
       month: "February",
       day: "13th",
       disabledAgen: true,
@@ -115,8 +123,8 @@ const meetingDataBoard = {
     {
       month: "December",
       day: "12th",
-      disabledAgen: true,
-      disabledMin: true,
+      disabledAgen: false,
+      disabledMin: false,
     },
   ],
   2022: [
