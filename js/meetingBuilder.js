@@ -79,7 +79,7 @@ function generateTableRow(
   });
   minutesCell.appendChild(minutesButton);
   row.appendChild(minutesCell);
-
+  console.log(row);
   return row;
 }
 
@@ -118,21 +118,37 @@ function generateTable(year, meetings, boardMeeting) {
   const container = document.getElementById("meetingsContainer");
 
   const outerDiv = document.createElement("div");
-  outerDiv.id = `${year}bm`;
+  if (boardMeeting) {
+    outerDiv.id = `${year}bm`;
+  } else {
+    outerDiv.id = `${year}pm`;
+  }
   outerDiv.className = "mx-auto d-none table-holder";
   outerDiv.style.maxWidth = "1300px";
 
   const h1 = document.createElement("h1");
-  h1.textContent = `${year} Board Meetings`;
+  if (boardMeeting) {
+    h1.textContent = `${year} Board Meetings`;
+  } else {
+    h1.textContent = `${year} Planning Commission Meetings`;
+  }
+
   outerDiv.appendChild(h1);
 
   const p = document.createElement("p");
   p.className = "lead";
   p.style.maxWidth = "500px";
-  p.innerHTML = `Meetings are held on the <strong>2nd Tuesday</strong> of each month at
-  the <a href="https://goo.gl/maps/piPSR82zw8zMaiNy7" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
+
+  if (boardMeeting) {
+    p.innerHTML = `Meetings are held on the <strong>2nd Tuesday</strong> of each month at
+    the <a href="https://goo.gl/maps/piPSR82zw8zMaiNy7" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
+      title="Click for Directions" style="color: black;"><strong>Lincoln Township Hall.</strong></a> Meetings begin
+    at <em>7:00pm Unless otherwise specified</em>`;
+  } else {
+    p.innerHTML = `Meetings are held at the <a href="https://goo.gl/maps/piPSR82zw8zMaiNy7" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
     title="Click for Directions" style="color: black;"><strong>Lincoln Township Hall.</strong></a> Meetings begin
-  at <em>7:00pm Unless otherwise specified</em>`;
+  at <em>6:30pm Unless otherwise specified</em>`;
+  }
 
   outerDiv.appendChild(p);
 
@@ -203,6 +219,12 @@ async function init() {
     }
     await generateTable(year, meetings, true);
   }
+
+  for (const [year, meetings] of Object.entries(meetingDataPlanning)) {
+    console.log(meetings);
+    await generateTable(year, meetings, false);
+  }
+
   await generateYear(years);
 }
 
