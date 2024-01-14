@@ -1,122 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Lincoln Township</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/Images/icon.png" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link href="css/styles_custom.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/header_.js"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <title>Lincoln Township</title>
-  <!-- Favicon-->
-  <link rel="icon" type="image/x-icon" href="assets/Images/icon.png" />
-  <!-- Core theme CSS (includes Bootstrap)-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link href="css/styles_custom.css" rel="stylesheet">
-  <script type="text/javascript" src="js/header_.js"></script>
-</head>
+  <body onload="currentPage('officials')">
+    <lincoln-header></lincoln-header>
 
-<body onload="currentPage('officials')">
+    <!-- Page content-->
+    <div class="container main-container">
+      <lincoln-alert></lincoln-alert>
+      <div class="row">
+        <div class="col">
+          <div class="card mx-auto mt-5 mb-5" style="width: 19rem">
+            <img
+              src="assets/Images/Asseessor.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center">Ron Thompson</h5>
+              <h6 class="card-subtitle mb-2 text-muted text-center">
+                Tax Assessor
+              </h6>
 
-  <lincoln-header></lincoln-header>
-
-  <!-- Page content-->
-  <div class="container  main-container">
-    <lincoln-alert></lincoln-alert>
-    <div class="row ">
-      <div class="col">
-        <div class="card mx-auto mt-5 mb-5" style="width: 19rem;">
-          <img src="assets/Images/Asseessor.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-center">Ron Thompson</h5>
-            <h6 class="card-subtitle mb-2 text-muted text-center">Tax Assessor</h6>
-
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-                <h6 class="card-subtitle mb-1">Address</h6>
-                <a class="page-link border-0 link-nobg">1882 N Hope Rd<br>Midland, MI
-                  48642</a>
-              </li>
-              <li class="list-group-item">
-                <h6 class="card-subtitle mb-1">Email</h6><a href="mailto: assessor@lincoln-twp.org"
-                  class="page-link border-0">assessor@lincoln-twp.org</a>
-              </li>
-              <li class="list-group-item">
-                <h6 class="card-subtitle mb-1">Office Phone<small class="text-muted"> Ext: (3)</small></h6><a
-                  href="tel:989-374-2220" class="page-link border-0">989-374-2220</a>
-              </li>
-              <li class="list-group-item border-bottom">
-                <h6 class="card-subtitle mb-1">Office Fax</h6><a class="page-link border-0 link-nobg">(989) 687-9167</a>
-              </li>
-              <li class="list-group-item">
-                <h6 class="card-subtitle mb-1 mt-1">Forms & Links</h6>
-                <ul class="list-group list-group-flush">
-                  <button class="page-link border-0 mx-auto text-start" data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="setSrcTitle('assets/Forms/LandDivisionApplication.pdf', 'Land Division Application')">• Land Division Application</button>
-                  <button class="page-link border-0 mx-auto text-start" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('https://co.midland.mi.us/Portals/0/Midland%20County/Documents/Treasurer/Form%202368%20PRE%20Affidavit.pdf', 'Principal Residence Exemption (PRE) Affidavit')">• Principal Residence Exemption (PRE) Affidavit</button>
-                  <button class="page-link border-0 mx-auto text-start" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('https://www.michigan.gov/taxes/-/media/Project/Websites/taxes/Forms/2001/2001_2602f.pdf?rev=a31b7405cc84445dbefef8e83ba514c7&hash=EDF81984602A99B6ABA5F9E5C50159E3', 'Request to Rescind (PRE)')">• Request to Rescind (PRE)</button>
-                  <button class="page-link border-0 mx-auto text-start" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('https://www.michigan.gov/taxes/-/media/Project/Websites/taxes/Forms/2008/2008_4640.pdf?rev=a6dfa1b5cefd49e7a5b7f69a62ac6ddf&hash=95413B84C93669BE8B7B188211CAFBBA', 'Conditional Rescission of (PRE)')">• Conditional Rescission of (PRE)</button>
-                  <button class="page-link border-0 mx-auto text-start" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Policy/PovertyGuidelines.pdf', 'Poverty Guidelines')">• Poverty Guidelines</button>
-                  <button class="page-link border-0 mx-auto text-start" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('https://co.midland.mi.us/Portals/0/Midland%20County/Documents/Treasurer/5737_01-21%20Application%20for%20Poverty%20Exemption.pdf ', 'Application for Poverty Exemption')">• Application for Poverty Exemption</button>
-                  <button class="page-link border-0 mx-auto text-start" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('https://www.michigan.gov/treasury/-/media/Project/Websites/treasury/BLGSS-PSD-FOLDER/5739.pdf?rev=f6359557dabe423d89f638dbb3ff4bc7&hash=908870BF6DD9119F5CFD54CA1905B916', 'Affirmation to Remain Exempt')">• Affirmation to Remain Exempt</button>    
-                  <button class="page-link border-0 mx-auto text-start" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('https://www.michigan.gov/treasury/-/media/Project/Websites/treasury/BLGSS-PSD-FOLDER/Poverty_Exemption_Taxpayer_Fact_Sheet.pdf?rev=7e06689ac21e49d9ac5ec062b5c95607&hash=9F646CCAFA3F668EA9C2DE8B5DFA7D46', 'Poverty Exemption Tax Payer Fact Sheet')">• Poverty Exemption Tax Payer Fact Sheet</button>    
-                  <button class="page-link border-0 mx-auto text-start" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Misc/ECF_Analysis_2023.pdf', 'ECF Analysis 2023')">• ECF Analysis 2023</button>
-                  <button class="page-link border-0 mx-auto text-start" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Misc/LandAnalysis2023.pdf', 'Land Analysis 2023')">• Land Analysis 2023</button>
-                  <button class="page-link border-0 mx-auto text-start" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setSrcTitle('assets/Misc/Assessors_Office_Accessibility_Policy.pdf', 'Assessors Office Accessibility Policy')">• Assessors Office Accessibility Policy</button>
-                </ul>
-              </li>
-            </ul>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <h6 class="card-subtitle mb-1">Address</h6>
+                  <a class="page-link border-0 link-nobg"
+                    >1882 N Hope Rd<br />Midland, MI 48642</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <h6 class="card-subtitle mb-1">Email</h6>
+                  <a
+                    href="mailto: assessor@lincoln-twp.org"
+                    class="page-link border-0"
+                    >assessor@lincoln-twp.org</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <h6 class="card-subtitle mb-1">
+                    Office Phone<small class="text-muted"> Ext: (3)</small>
+                  </h6>
+                  <a href="tel:989-374-2220" class="page-link border-0"
+                    >989-374-2220</a
+                  >
+                </li>
+                <li class="list-group-item border-bottom">
+                  <h6 class="card-subtitle mb-1">Office Fax</h6>
+                  <a class="page-link border-0 link-nobg">(989) 687-9167</a>
+                </li>
+                <li class="list-group-item">
+                  <h6 class="card-subtitle mb-1 mt-1">Forms & Links</h6>
+                  <ul class="list-group list-group-flush">
+                    <button
+                      class="page-link border-0 mx-auto text-start"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      onclick="setSrcTitle('assets/Forms/LandDivisionApplication.pdf', 'Land Division Application')"
+                    >
+                      • Land Division Application
+                    </button>
+                    <button
+                      class="page-link border-0 mx-auto text-start"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      onclick="setSrcTitle('assets/LandDivisionTaxCertificationForm.pdf', 'Land Division Tax Certification Form')"
+                    >
+                      • Land Division Tax Certification Form
+                    </button>
+                    <a
+                      class="page-link border-0 mx-auto text-start"
+                      href="'https://www.michigan.gov/taxes/property/forms/instructions/principal-residence-exemption-forms"
+                    >
+                      • Property Tax Forms
+                    </a>
+                    <button
+                      class="page-link border-0 mx-auto text-start"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      onclick="setSrcTitle('assets/Policy/PovertyGuidelines_.pdf', 'Poverty Guidelines')"
+                    >
+                      • Poverty Guidelines
+                    </button>
+                    <a
+                      class="page-link border-0 mx-auto text-start"
+                      href="https://www.michigan.gov/treasury/local/stc/poverty-exemption-forms-and-policy-related-to-pa-253-of-2020"
+                    >
+                      • Poverty Exemption Forms
+                    </a>
+                    <button
+                      class="page-link border-0 mx-auto text-start"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      onclick="setSrcTitle('assets/Misc/ECF_Analysis_2023.pdf', 'ECF Analysis 2023')"
+                    >
+                      • ECF Analysis 2023
+                    </button>
+                    <button
+                      class="page-link border-0 mx-auto text-start"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      onclick="setSrcTitle('assets/Misc/LandAnalysis2023.pdf', 'Land Analysis 2023')"
+                    >
+                      • Land Analysis 2023
+                    </button>
+                    <button
+                      class="page-link border-0 mx-auto text-start"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      onclick="setSrcTitle('assets/Misc/Assessors_Office_Accessibility_Policy.pdf', 'Assessors Office Accessibility Policy')"
+                    >
+                      • Assessors Office Accessibility Policy
+                    </button>
+                  </ul>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      <div class="col justify-content-md-center bg-light border">
-        <div class="text-center mt-5 border-bottom">
-          <h1>Township Assessor</h1>
-        </div>
-
-        <div class="my-auto">
-          <div class="text-center mt-5 m-5">
-            <h5>Contact the Township Assessor if you have any questions concerning:</h5>
+        <div class="col justify-content-md-center bg-light border">
+          <div class="text-center mt-5 border-bottom">
+            <h1>Township Assessor</h1>
           </div>
-          <ul class="mx-5">
-            <li>Questions on the assessment of your property</li>
-            <li>Principal Residence Exemptions or Rescinds</li>
-            <li>Land Divisions or Combinations</li>
-            <li>Poverty Exemptions</li>
-            <li>Disabled Veterans Exemption</li>
-            <li>Information on any parcel of property</li>
-          </ul>
-          <div class="text-start mt-1 mx-5 border-top">
-            <h6><br><strong>All calls or emails will be answered within 7 business days</strong></h6>
+
+          <div class="my-auto">
+            <div class="text-center mt-5 m-5">
+              <h5>
+                Contact the Township Assessor if you have any questions
+                concerning:
+              </h5>
+            </div>
+            <ul class="mx-5">
+              <li>Questions on the assessment of your property</li>
+              <li>Principal Residence Exemptions or Rescinds</li>
+              <li>Land Divisions or Combinations</li>
+              <li>Poverty Exemptions</li>
+              <li>Disabled Veterans Exemption</li>
+              <li>Information on any parcel of property</li>
+            </ul>
+            <div class="text-start mt-1 mx-5 border-top">
+              <h6>
+                <br /><strong
+                  >All calls or emails will be answered within 7 business
+                  days</strong
+                >
+              </h6>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="modal fade modal-dialog-scrollable" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog custom-modal-size">
-      <div class="modal-content">
-        <div class="modal-header" id="afterme">
-          <h5 class="modal-title" id="modalTitle"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
+    <div
+      class="modal fade modal-dialog-scrollable"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog custom-modal-size">
+        <div class="modal-content">
+          <div class="modal-header" id="afterme">
+            <h5 class="modal-title" id="modalTitle"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
 
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-danger" onclick="download_file()">Download</button>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              onclick="download_file()"
+            >
+              Download
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <lincoln-footer></lincoln-footer>
+    <lincoln-footer></lincoln-footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <script src="js/scripts.js"></script>
-  <script src="js/footer.js"></script>
-  <script src="js/alert.js"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/alert.js"></script>
+  </body>
 </html>
