@@ -4,9 +4,9 @@ const meetingDataBoard = {
       month: "January",
       day: "9th",
       disabledAgen: false,
-      disabledMin: true,
+      disabledMin: false,
       special: false,
-      budget: false
+      budget: false,
     },
     {
       month: "February",
