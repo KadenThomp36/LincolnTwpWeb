@@ -12,13 +12,13 @@ const meetingDataBoard = {
       month: "February",
       day: "13th",
       disabledAgen: false,
-      disabledMin: true,
+      disabledMin: false,
     },
     {
       month: "March",
       day: "12th",
       disabledAgen: true,
-      disabledMin: true,
+      disabledMin: false,
     },
     {
       month: "April",
