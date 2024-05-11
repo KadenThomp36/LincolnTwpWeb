@@ -13,8 +13,8 @@ const meetingDataPlanning = {
     {
       month: "May",
       day: "7th",
-      disabledAgen: true,
-      disabledMin: true,
+      disabledAgen: false,
+      disabledMin: false,
     },
     {
       month: "July",
