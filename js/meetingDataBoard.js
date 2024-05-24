@@ -29,8 +29,8 @@ const meetingDataBoard = {
     {
       month: "May",
       day: "14th",
-      disabledAgen: true,
-      disabledMin: true,
+      disabledAgen: false,
+      disabledMin: false,
     },
     {
       month: "June",
