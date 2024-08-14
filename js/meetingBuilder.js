@@ -13,6 +13,7 @@ function generateTableRow(
 ) {
   let agendaPath = agendaPathOverride;
   let minutesPath = minutesPathOverride;
+
   if (!agendaPathOverride) {
     agendaPath = generatePath(year, month, boardMeeting, true, special, budget);
   }
@@ -79,17 +80,16 @@ function generateTableRow(
   });
   minutesCell.appendChild(minutesButton);
   row.appendChild(minutesCell);
-  console.log(row);
   return row;
 }
 
 function generatePath(year, month, boardMeeting, agenda, special, budget) {
-  let path = "";
+  let path = "https://kdentee.com/";
   let monthTrim = month.substring(0, 3);
   if (boardMeeting) {
-    path += "brdmtgs/" + year + "b/";
+    path += year + "b/";
   } else {
-    path += "brdmtgs/" + year + "p/";
+    path += year + "p/";
   }
 
   path += monthTrim + "mtg";
@@ -211,21 +211,98 @@ function generateYear(years) {
 }
 
 async function init() {
-  const years = [];
-  // Use the imported meetingsData instead of fetchMeetingsData
-  for (const [year, meetings] of Object.entries(meetingDataBoard)) {
-    if (!years.find((element) => element === year)) {
-      years.push(year);
+  try {
+    // Initiate both fetch requests in parallel
+    const [responseDataBoard, responseDataPlanning] = await Promise.all([
+      fetch(
+        "https://script.google.com/macros/s/AKfycbyOzJMuBLjS61Nc922OJPt5v9Nns0AO-mLFul9mZjOQQEWwMdWlvjBsqF0a9JbJLVsDlw/exec?meetingType=BoardMeetings"
+      ),
+      fetch(
+        "https://script.google.com/macros/s/AKfycbyOzJMuBLjS61Nc922OJPt5v9Nns0AO-mLFul9mZjOQQEWwMdWlvjBsqF0a9JbJLVsDlw/exec?meetingType=PlanningMeetings"
+      ),
+    ]);
+
+    // Process text data in parallel
+    const [textDataBoard, textDataPlanning] = await Promise.all([
+      responseDataBoard.text(),
+      responseDataPlanning.text(),
+    ]);
+
+    const [meetingDataBoard, meetingDataPlanning] = await Promise.all([
+      processBoardMeetings(textDataBoard),
+      processPlanningMeetings(textDataPlanning),
+    ]);
+
+    const years = [];
+
+    // Generate tables for BoardMeetings
+    for (const [year, meetings] of Object.entries(meetingDataBoard)) {
+      if (!years.includes(year)) {
+        years.push(year);
+      }
+      await generateTable(year, meetings, true);
     }
-    await generateTable(year, meetings, true);
+
+    // Generate tables for PlanningMeetings
+    for (const [year, meetings] of Object.entries(meetingDataPlanning)) {
+      await generateTable(year, meetings, false);
+    }
+
+    await generateYear(years);
+  } catch (error) {
+    console.error("Error fetching or converting data:", error);
+  }
+}
+
+function processBoardMeetings(textData) {
+  const valuesBoard = textData.split(",");
+  const meetingDataBoard = {};
+
+  for (let i = 0; i < valuesBoard.length; i += 10) {
+    const year = valuesBoard[i];
+    const meeting = {
+      month: valuesBoard[i + 1],
+      day: valuesBoard[i + 2],
+      disabledAgen: valuesBoard[i + 3].toLowerCase() === "true",
+      disabledMin: valuesBoard[i + 4].toLowerCase() === "true",
+      special: valuesBoard[i + 5].toLowerCase() === "true",
+      budget: valuesBoard[i + 6].toLowerCase() === "true",
+      subText: valuesBoard[i + 7],
+      agendaPath: valuesBoard[i + 8],
+      minutesPath: valuesBoard[i + 9],
+    };
+
+    if (!meetingDataBoard[year]) {
+      meetingDataBoard[year] = [];
+    }
+    meetingDataBoard[year].push(meeting);
   }
 
-  for (const [year, meetings] of Object.entries(meetingDataPlanning)) {
-    console.log(meetings);
-    await generateTable(year, meetings, false);
+  return meetingDataBoard;
+}
+
+function processPlanningMeetings(textData) {
+  const valuesPlanning = textData.split(",");
+  const meetingDataPlanning = {};
+
+  for (let i = 0; i < valuesPlanning.length; i += 7) {
+    const year = valuesPlanning[i];
+    const meeting = {
+      month: valuesPlanning[i + 1],
+      day: valuesPlanning[i + 2],
+      disabledAgen: valuesPlanning[i + 3].toLowerCase() === "true",
+      disabledMin: valuesPlanning[i + 4].toLowerCase() === "true",
+      agendaPath: valuesPlanning[i + 5],
+      minutesPath: valuesPlanning[i + 6],
+    };
+
+    if (!meetingDataPlanning[year]) {
+      meetingDataPlanning[year] = [];
+    }
+    meetingDataPlanning[year].push(meeting);
   }
 
-  await generateYear(years);
+  return meetingDataPlanning;
 }
 
 init();
