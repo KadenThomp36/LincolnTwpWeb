@@ -51,8 +51,13 @@ var myInput = document.getElementById("myInput");
 myModal.addEventListener("shown.bs.modal", function () {
   myInput.focus();
 });
+
 var source;
+
 function setSrc(src) {
+  // Append a unique query parameter to the src to prevent caching
+  const uniqueSrc = `${src}?cache_bust=${new Date().getTime()}`;
+
   source = src;
   if (!firstmodal) {
     const embed = document.getElementById("embedpdf");
@@ -65,7 +70,7 @@ function setSrc(src) {
   if (afterme) {
     afterme.insertAdjacentHTML(
       "afterend",
-      `<iframe src="${src}" id="embedpdf" width="100%" height="500px"></iframe>`
+      `<iframe src="${uniqueSrc}" id="embedpdf" width="100%" height="500px"></iframe>`
     );
   }
 }
