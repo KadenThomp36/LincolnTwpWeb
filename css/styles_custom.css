@@ -245,9 +245,9 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .customDisabled {
   pointer-events: none;
-  background-color: #e17581;
-  border-color: #e17581;
-  -webkit-appearance: none;
+  background-color: #e17581 !important;
+  border-color: #e17581 !important;
+  -webkit-appearance: none !important;
 }
 @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
   .sticky-table-head {
