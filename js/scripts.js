@@ -75,7 +75,16 @@ function setSrc(src) {
   }
 }
 
+function googleTrackEvent(resource, title) {
+  gtag("event", "click", {
+    event_category: "Modal Popup",
+    resource: resource,
+    title: title,
+  });
+}
+
 function setSrcTitle(src, title) {
+  googleTrackEvent(src, title);
   source = src;
   if (firstmodal != true) {
     document.getElementById("embedpdf").remove();
