@@ -76,7 +76,7 @@ function setSrc(src) {
 }
 
 function googleTrackEvent(resource, title) {
-  gtag("event", "click", {
+  gtag("event", `Open Modal - ${title}`, {
     event_category: "Modal Popup",
     resource: resource,
     title: title,
