@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Lincoln Township</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom Admin Styles -->
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="bi bi-building"></i>
+                <span class="logo-text">Lincoln Twp</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <span class="nav-section-title">Main</span>
+                <ul class="nav-list">
+                    <li class="nav-item active">
+                        <a href="#dashboard" class="nav-link" data-page="dashboard">
+                            <i class="bi bi-grid-1x2"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#meetings" class="nav-link" data-page="meetings">
+                            <i class="bi bi-calendar-event"></i>
+                            <span>Meetings</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#officials" class="nav-link" data-page="officials">
+                            <i class="bi bi-people"></i>
+                            <span>Officials</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <span class="nav-section-title">Content</span>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#documents" class="nav-link" data-page="documents">
+                            <i class="bi bi-file-earmark-text"></i>
+                            <span>Documents</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#forms" class="nav-link" data-page="forms">
+                            <i class="bi bi-file-earmark-ruled"></i>
+                            <span>Forms</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#announcements" class="nav-link" data-page="announcements">
+                            <i class="bi bi-megaphone"></i>
+                            <span>Announcements</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <span class="nav-section-title">System</span>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#settings" class="nav-link" data-page="settings">
+                            <i class="bi bi-gear"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">
+                            <i class="bi bi-box-arrow-left"></i>
+                            <span>Back to Site</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="bi bi-person-circle"></i>
+                </div>
+                <div class="user-details">
+                    <span class="user-name">Admin</span>
+                    <span class="user-role">Administrator</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        <!-- Top Header -->
+        <header class="top-header">
+            <div class="header-left">
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="page-title">
+                    <h1 id="pageTitle">Dashboard</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                            <li class="breadcrumb-item active" id="breadcrumbCurrent">Dashboard</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="header-actions">
+                    <button class="action-btn" title="Notifications">
+                        <i class="bi bi-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <button class="action-btn" title="Quick Actions">
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="content-wrapper">
+            <!-- Dashboard Page -->
+            <div class="page-content active" id="page-dashboard">
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon blue">
+                            <i class="bi bi-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value">12</span>
+                            <span class="stat-label">Upcoming Meetings</span>
+                        </div>
+                        <div class="stat-trend up">
+                            <i class="bi bi-arrow-up-short"></i>
+                            <span>2 this week</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value">24</span>
+                            <span class="stat-label">Township Officials</span>
+                        </div>
+                        <div class="stat-trend neutral">
+                            <i class="bi bi-dash"></i>
+                            <span>No change</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon purple">
+                            <i class="bi bi-file-earmark-text"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value">156</span>
+                            <span class="stat-label">Documents</span>
+                        </div>
+                        <div class="stat-trend up">
+                            <i class="bi bi-arrow-up-short"></i>
+                            <span>8 new</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon orange">
+                            <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value">2.4k</span>
+                            <span class="stat-label">Site Visits</span>
+                        </div>
+                        <div class="stat-trend up">
+                            <i class="bi bi-arrow-up-short"></i>
+                            <span>12% increase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Dashboard Grid -->
+                <div class="dashboard-grid">
+                    <!-- Recent Activity -->
+                    <div class="dashboard-card activity-card">
+                        <div class="card-header">
+                            <h3>Recent Activity</h3>
+                            <button class="card-action">View All</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon blue">
+                                        <i class="bi bi-calendar-plus"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p class="activity-text">New board meeting scheduled</p>
+                                        <span class="activity-time">2 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon green">
+                                        <i class="bi bi-file-earmark-arrow-up"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p class="activity-text">Meeting minutes uploaded</p>
+                                        <span class="activity-time">5 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon purple">
+                                        <i class="bi bi-person-plus"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p class="activity-text">Official profile updated</p>
+                                        <span class="activity-time">Yesterday</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon orange">
+                                        <i class="bi bi-megaphone"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p class="activity-text">New announcement published</p>
+                                        <span class="activity-time">2 days ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon blue">
+                                        <i class="bi bi-map"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p class="activity-text">Zoning map updated</p>
+                                        <span class="activity-time">3 days ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Meetings -->
+                    <div class="dashboard-card meetings-card">
+                        <div class="card-header">
+                            <h3>Upcoming Meetings</h3>
+                            <button class="card-action">Manage</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="meetings-list">
+                                <div class="meeting-item">
+                                    <div class="meeting-date">
+                                        <span class="month">Dec</span>
+                                        <span class="day">18</span>
+                                    </div>
+                                    <div class="meeting-info">
+                                        <h4>Board Meeting</h4>
+                                        <p><i class="bi bi-clock"></i> 7:00 PM</p>
+                                        <p><i class="bi bi-geo-alt"></i> Township Hall</p>
+                                    </div>
+                                    <div class="meeting-actions">
+                                        <button class="btn-icon" title="Edit">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="meeting-item">
+                                    <div class="meeting-date">
+                                        <span class="month">Dec</span>
+                                        <span class="day">20</span>
+                                    </div>
+                                    <div class="meeting-info">
+                                        <h4>Planning Commission</h4>
+                                        <p><i class="bi bi-clock"></i> 6:30 PM</p>
+                                        <p><i class="bi bi-geo-alt"></i> Township Hall</p>
+                                    </div>
+                                    <div class="meeting-actions">
+                                        <button class="btn-icon" title="Edit">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="meeting-item">
+                                    <div class="meeting-date">
+                                        <span class="month">Jan</span>
+                                        <span class="day">8</span>
+                                    </div>
+                                    <div class="meeting-info">
+                                        <h4>Board Meeting</h4>
+                                        <p><i class="bi bi-clock"></i> 7:00 PM</p>
+                                        <p><i class="bi bi-geo-alt"></i> Township Hall</p>
+                                    </div>
+                                    <div class="meeting-actions">
+                                        <button class="btn-icon" title="Edit">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="dashboard-card quick-actions-card">
+                        <div class="card-header">
+                            <h3>Quick Actions</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="quick-actions-grid">
+                                <button class="quick-action-btn">
+                                    <i class="bi bi-calendar-plus"></i>
+                                    <span>Add Meeting</span>
+                                </button>
+                                <button class="quick-action-btn">
+                                    <i class="bi bi-file-earmark-plus"></i>
+                                    <span>Upload Document</span>
+                                </button>
+                                <button class="quick-action-btn">
+                                    <i class="bi bi-person-plus"></i>
+                                    <span>Add Official</span>
+                                </button>
+                                <button class="quick-action-btn">
+                                    <i class="bi bi-megaphone"></i>
+                                    <span>New Announcement</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Meetings Page -->
+            <div class="page-content" id="page-meetings">
+                <div class="page-header">
+                    <div class="page-header-left">
+                        <h2>Meeting Management</h2>
+                        <p>Schedule and manage township meetings</p>
+                    </div>
+                    <div class="page-header-right">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-plus-lg"></i>
+                            <span>Add Meeting</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="filter-bar">
+                    <div class="filter-group">
+                        <label>Meeting Type</label>
+                        <select class="form-select">
+                            <option value="">All Types</option>
+                            <option value="board">Board Meeting</option>
+                            <option value="planning">Planning Commission</option>
+                            <option value="zoning">Zoning Board</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Year</label>
+                        <select class="form-select">
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Search</label>
+                        <div class="search-input">
+                            <i class="bi bi-search"></i>
+                            <input type="text" class="form-control" placeholder="Search meetings...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Meeting Type</th>
+                                <th>Time</th>
+                                <th>Location</th>
+                                <th>Agenda</th>
+                                <th>Minutes</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>December 18, 2024</td>
+                                <td><span class="badge badge-blue">Board Meeting</span></td>
+                                <td>7:00 PM</td>
+                                <td>Township Hall</td>
+                                <td><span class="status-badge uploaded"><i class="bi bi-check-circle"></i> Uploaded</span></td>
+                                <td><span class="status-badge pending"><i class="bi bi-clock"></i> Pending</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="btn-icon" title="View"><i class="bi bi-eye"></i></button>
+                                        <button class="btn-icon" title="Edit"><i class="bi bi-pencil"></i></button>
+                                        <button class="btn-icon danger" title="Delete"><i class="bi bi-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>December 20, 2024</td>
+                                <td><span class="badge badge-green">Planning Commission</span></td>
+                                <td>6:30 PM</td>
+                                <td>Township Hall</td>
+                                <td><span class="status-badge uploaded"><i class="bi bi-check-circle"></i> Uploaded</span></td>
+                                <td><span class="status-badge pending"><i class="bi bi-clock"></i> Pending</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="btn-icon" title="View"><i class="bi bi-eye"></i></button>
+                                        <button class="btn-icon" title="Edit"><i class="bi bi-pencil"></i></button>
+                                        <button class="btn-icon danger" title="Delete"><i class="bi bi-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>November 20, 2024</td>
+                                <td><span class="badge badge-blue">Board Meeting</span></td>
+                                <td>7:00 PM</td>
+                                <td>Township Hall</td>
+                                <td><span class="status-badge uploaded"><i class="bi bi-check-circle"></i> Uploaded</span></td>
+                                <td><span class="status-badge uploaded"><i class="bi bi-check-circle"></i> Uploaded</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="btn-icon" title="View"><i class="bi bi-eye"></i></button>
+                                        <button class="btn-icon" title="Edit"><i class="bi bi-pencil"></i></button>
+                                        <button class="btn-icon danger" title="Delete"><i class="bi bi-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Officials Page -->
+            <div class="page-content" id="page-officials">
+                <div class="page-header">
+                    <div class="page-header-left">
+                        <h2>Officials Directory</h2>
+                        <p>Manage township officials and their information</p>
+                    </div>
+                    <div class="page-header-right">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-plus-lg"></i>
+                            <span>Add Official</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="officials-grid">
+                    <div class="official-card">
+                        <div class="official-avatar">
+                            <i class="bi bi-person-circle"></i>
+                        </div>
+                        <div class="official-info">
+                            <h4>John Smith</h4>
+                            <span class="official-title">Township Supervisor</span>
+                            <div class="official-contact">
+                                <p><i class="bi bi-envelope"></i> supervisor@lincolntwp.org</p>
+                                <p><i class="bi bi-telephone"></i> (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="official-actions">
+                            <button class="btn-icon" title="Edit"><i class="bi bi-pencil"></i></button>
+                            <button class="btn-icon danger" title="Delete"><i class="bi bi-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="official-card">
+                        <div class="official-avatar">
+                            <i class="bi bi-person-circle"></i>
+                        </div>
+                        <div class="official-info">
+                            <h4>Jane Doe</h4>
+                            <span class="official-title">Township Clerk</span>
+                            <div class="official-contact">
+                                <p><i class="bi bi-envelope"></i> clerk@lincolntwp.org</p>
+                                <p><i class="bi bi-telephone"></i> (555) 123-4568</p>
+                            </div>
+                        </div>
+                        <div class="official-actions">
+                            <button class="btn-icon" title="Edit"><i class="bi bi-pencil"></i></button>
+                            <button class="btn-icon danger" title="Delete"><i class="bi bi-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="official-card">
+                        <div class="official-avatar">
+                            <i class="bi bi-person-circle"></i>
+                        </div>
+                        <div class="official-info">
+                            <h4>Robert Johnson</h4>
+                            <span class="official-title">Township Treasurer</span>
+                            <div class="official-contact">
+                                <p><i class="bi bi-envelope"></i> treasurer@lincolntwp.org</p>
+                                <p><i class="bi bi-telephone"></i> (555) 123-4569</p>
+                            </div>
+                        </div>
+                        <div class="official-actions">
+                            <button class="btn-icon" title="Edit"><i class="bi bi-pencil"></i></button>
+                            <button class="btn-icon danger" title="Delete"><i class="bi bi-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="official-card add-new">
+                        <i class="bi bi-plus-circle"></i>
+                        <span>Add New Official</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documents Page -->
+            <div class="page-content" id="page-documents">
+                <div class="page-header">
+                    <div class="page-header-left">
+                        <h2>Document Management</h2>
+                        <p>Upload and organize township documents</p>
+                    </div>
+                    <div class="page-header-right">
+                        <button class="btn btn-secondary">
+                            <i class="bi bi-folder-plus"></i>
+                            <span>New Folder</span>
+                        </button>
+                        <button class="btn btn-primary">
+                            <i class="bi bi-upload"></i>
+                            <span>Upload Files</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="documents-layout">
+                    <div class="folder-sidebar">
+                        <h4>Folders</h4>
+                        <ul class="folder-list">
+                            <li class="folder-item active">
+                                <i class="bi bi-folder"></i>
+                                <span>All Documents</span>
+                                <span class="folder-count">156</span>
+                            </li>
+                            <li class="folder-item">
+                                <i class="bi bi-folder"></i>
+                                <span>Meeting Minutes</span>
+                                <span class="folder-count">48</span>
+                            </li>
+                            <li class="folder-item">
+                                <i class="bi bi-folder"></i>
+                                <span>Agendas</span>
+                                <span class="folder-count">52</span>
+                            </li>
+                            <li class="folder-item">
+                                <i class="bi bi-folder"></i>
+                                <span>Forms</span>
+                                <span class="folder-count">23</span>
+                            </li>
+                            <li class="folder-item">
+                                <i class="bi bi-folder"></i>
+                                <span>Ordinances</span>
+                                <span class="folder-count">18</span>
+                            </li>
+                            <li class="folder-item">
+                                <i class="bi bi-folder"></i>
+                                <span>Maps & Plans</span>
+                                <span class="folder-count">15</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="documents-content">
+                        <div class="documents-toolbar">
+                            <div class="search-input">
+                                <i class="bi bi-search"></i>
+                                <input type="text" class="form-control" placeholder="Search documents...">
+                            </div>
+                            <div class="view-toggle">
+                                <button class="view-btn active" title="Grid View"><i class="bi bi-grid-3x3-gap"></i></button>
+                                <button class="view-btn" title="List View"><i class="bi bi-list-ul"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="documents-grid">
+                            <div class="document-card">
+                                <div class="document-icon pdf">
+                                    <i class="bi bi-file-earmark-pdf"></i>
+                                </div>
+                                <div class="document-info">
+                                    <h5>Board Minutes - Nov 2024</h5>
+                                    <span class="document-meta">PDF • 2.4 MB • Nov 20, 2024</span>
+                                </div>
+                                <div class="document-actions">
+                                    <button class="btn-icon" title="Download"><i class="bi bi-download"></i></button>
+                                    <button class="btn-icon" title="More"><i class="bi bi-three-dots"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="document-card">
+                                <div class="document-icon pdf">
+                                    <i class="bi bi-file-earmark-pdf"></i>
+                                </div>
+                                <div class="document-info">
+                                    <h5>Zoning Ordinance 2024</h5>
+                                    <span class="document-meta">PDF • 5.1 MB • Oct 15, 2024</span>
+                                </div>
+                                <div class="document-actions">
+                                    <button class="btn-icon" title="Download"><i class="bi bi-download"></i></button>
+                                    <button class="btn-icon" title="More"><i class="bi bi-three-dots"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="document-card">
+                                <div class="document-icon image">
+                                    <i class="bi bi-file-earmark-image"></i>
+                                </div>
+                                <div class="document-info">
+                                    <h5>Zoning Map</h5>
+                                    <span class="document-meta">PNG • 8.2 MB • Dec 10, 2024</span>
+                                </div>
+                                <div class="document-actions">
+                                    <button class="btn-icon" title="Download"><i class="bi bi-download"></i></button>
+                                    <button class="btn-icon" title="More"><i class="bi bi-three-dots"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="document-card">
+                                <div class="document-icon pdf">
+                                    <i class="bi bi-file-earmark-pdf"></i>
+                                </div>
+                                <div class="document-info">
+                                    <h5>Building Permit Form</h5>
+                                    <span class="document-meta">PDF • 156 KB • Sep 5, 2024</span>
+                                </div>
+                                <div class="document-actions">
+                                    <button class="btn-icon" title="Download"><i class="bi bi-download"></i></button>
+                                    <button class="btn-icon" title="More"><i class="bi bi-three-dots"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Forms Page -->
+            <div class="page-content" id="page-forms">
+                <div class="page-header">
+                    <div class="page-header-left">
+                        <h2>Forms Management</h2>
+                        <p>Manage downloadable forms for residents</p>
+                    </div>
+                    <div class="page-header-right">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-plus-lg"></i>
+                            <span>Add Form</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="forms-list">
+                    <div class="form-item">
+                        <div class="form-icon">
+                            <i class="bi bi-file-earmark-text"></i>
+                        </div>
+                        <div class="form-details">
+                            <h4>Building Permit Application</h4>
+                            <p>Application for construction and building permits</p>
+                            <div class="form-meta">
+                                <span><i class="bi bi-download"></i> 234 downloads</span>
+                                <span><i class="bi bi-calendar"></i> Updated Sep 5, 2024</span>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-eye"></i> Preview
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="bi bi-pencil"></i> Edit
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-icon">
+                            <i class="bi bi-file-earmark-text"></i>
+                        </div>
+                        <div class="form-details">
+                            <h4>Zoning Variance Request</h4>
+                            <p>Request for zoning variance or exception</p>
+                            <div class="form-meta">
+                                <span><i class="bi bi-download"></i> 89 downloads</span>
+                                <span><i class="bi bi-calendar"></i> Updated Aug 12, 2024</span>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-eye"></i> Preview
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="bi bi-pencil"></i> Edit
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-icon">
+                            <i class="bi bi-file-earmark-text"></i>
+                        </div>
+                        <div class="form-details">
+                            <h4>FOIA Request Form</h4>
+                            <p>Freedom of Information Act request form</p>
+                            <div class="form-meta">
+                                <span><i class="bi bi-download"></i> 156 downloads</span>
+                                <span><i class="bi bi-calendar"></i> Updated Jul 20, 2024</span>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-eye"></i> Preview
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="bi bi-pencil"></i> Edit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Announcements Page -->
+            <div class="page-content" id="page-announcements">
+                <div class="page-header">
+                    <div class="page-header-left">
+                        <h2>Announcements</h2>
+                        <p>Create and manage site announcements and alerts</p>
+                    </div>
+                    <div class="page-header-right">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-plus-lg"></i>
+                            <span>New Announcement</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="announcements-list">
+                    <div class="announcement-item">
+                        <div class="announcement-status active">
+                            <span class="status-dot"></span>
+                            Active
+                        </div>
+                        <div class="announcement-content">
+                            <h4>Holiday Office Hours</h4>
+                            <p>The township office will be closed December 24-25 and January 1 for the holidays.</p>
+                            <div class="announcement-meta">
+                                <span><i class="bi bi-calendar"></i> Dec 1, 2024 - Jan 2, 2025</span>
+                                <span class="announcement-type info"><i class="bi bi-info-circle"></i> Info</span>
+                            </div>
+                        </div>
+                        <div class="announcement-actions">
+                            <button class="btn-icon" title="Edit"><i class="bi bi-pencil"></i></button>
+                            <button class="btn-icon" title="Deactivate"><i class="bi bi-pause-circle"></i></button>
+                            <button class="btn-icon danger" title="Delete"><i class="bi bi-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="announcement-item">
+                        <div class="announcement-status inactive">
+                            <span class="status-dot"></span>
+                            Inactive
+                        </div>
+                        <div class="announcement-content">
+                            <h4>Road Construction Notice</h4>
+                            <p>Main Street will be closed for repairs from November 1-15.</p>
+                            <div class="announcement-meta">
+                                <span><i class="bi bi-calendar"></i> Nov 1 - Nov 15, 2024</span>
+                                <span class="announcement-type warning"><i class="bi bi-exclamation-triangle"></i> Warning</span>
+                            </div>
+                        </div>
+                        <div class="announcement-actions">
+                            <button class="btn-icon" title="Edit"><i class="bi bi-pencil"></i></button>
+                            <button class="btn-icon" title="Activate"><i class="bi bi-play-circle"></i></button>
+                            <button class="btn-icon danger" title="Delete"><i class="bi bi-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Page -->
+            <div class="page-content" id="page-settings">
+                <div class="page-header">
+                    <div class="page-header-left">
+                        <h2>Settings</h2>
+                        <p>Configure your admin dashboard preferences</p>
+                    </div>
+                </div>
+
+                <div class="settings-grid">
+                    <div class="settings-card">
+                        <div class="settings-card-header">
+                            <i class="bi bi-building"></i>
+                            <h4>Township Information</h4>
+                        </div>
+                        <div class="settings-card-body">
+                            <div class="form-group">
+                                <label>Township Name</label>
+                                <input type="text" class="form-control" value="Lincoln Township">
+                            </div>
+                            <div class="form-group">
+                                <label>Address</label>
+                                <input type="text" class="form-control" value="123 Township Hall Rd">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="text" class="form-control" value="(555) 123-4567">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" class="form-control" value="info@lincolntwp.org">
+                            </div>
+                        </div>
+                        <div class="settings-card-footer">
+                            <button class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <div class="settings-card-header">
+                            <i class="bi bi-palette"></i>
+                            <h4>Appearance</h4>
+                        </div>
+                        <div class="settings-card-body">
+                            <div class="form-group">
+                                <label>Theme</label>
+                                <select class="form-select">
+                                    <option value="light">Light Mode</option>
+                                    <option value="dark">Dark Mode</option>
+                                    <option value="auto">System Default</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Accent Color</label>
+                                <div class="color-options">
+                                    <button class="color-btn blue active"></button>
+                                    <button class="color-btn green"></button>
+                                    <button class="color-btn purple"></button>
+                                    <button class="color-btn orange"></button>
+                                    <button class="color-btn red"></button>
+                                </div>
+                            </div>
+                            <div class="form-check-group">
+                                <input type="checkbox" class="form-check-input" id="compactMode">
+                                <label for="compactMode">Compact sidebar</label>
+                            </div>
+                        </div>
+                        <div class="settings-card-footer">
+                            <button class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <div class="settings-card-header">
+                            <i class="bi bi-bell"></i>
+                            <h4>Notifications</h4>
+                        </div>
+                        <div class="settings-card-body">
+                            <div class="form-check-group">
+                                <input type="checkbox" class="form-check-input" id="emailNotifs" checked>
+                                <label for="emailNotifs">Email notifications</label>
+                            </div>
+                            <div class="form-check-group">
+                                <input type="checkbox" class="form-check-input" id="meetingReminders" checked>
+                                <label for="meetingReminders">Meeting reminders</label>
+                            </div>
+                            <div class="form-check-group">
+                                <input type="checkbox" class="form-check-input" id="docUploads">
+                                <label for="docUploads">Document upload alerts</label>
+                            </div>
+                        </div>
+                        <div class="settings-card-footer">
+                            <button class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Admin JS -->
+    <script src="js/admin.js"></script>
+</body>
+</html>
